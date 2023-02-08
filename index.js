@@ -10,7 +10,10 @@ const flash = require("connect-flash");
 
 const users = require("./models/user.js")
 const { authCheck } = require("./middleware/auth");
+
+// routes included
 const eventRoutes = require("./routes/eventroutes.js")
+const authRoutes = require("./routes/authroutes")
 
 
 const port = process.env.PORT || 5000;
@@ -75,12 +78,16 @@ app.use(passport.session());
 app.use(flash());
 
 
-// routes
+// routes used
 app.use("/events", eventRoutes)
+app.use("/auth", authRoutes)
 
 
 app.get("/", async (req, res) => {
-    res.render("index");
+    const context = {
+        authenticated: req.isAuthenticated(),
+    }
+    res.render("index", context);
 })
 
 
