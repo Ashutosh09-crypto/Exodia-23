@@ -10,6 +10,7 @@ const flash = require("connect-flash");
 
 const users = require("./models/user.js")
 const { authCheck } = require("./middleware/auth");
+const eventRoutes = require("./routes/eventroutes.js")
 
 
 const port = process.env.PORT || 5000;
@@ -22,11 +23,12 @@ require("dotenv").config({ path: "./config/config.env" });
 require("./config/passport")(passport);
 
 
-
 const app = express();
 
 
 connectDB();
+
+
 
 // Sessions middleware
 app.use(
@@ -71,6 +73,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(flash());
+
+
+// routes
+app.use("/events", eventRoutes)
 
 
 app.get("/", async (req, res) => {

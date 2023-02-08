@@ -15,25 +15,25 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.1",
-    "body-parser": "^1.20.0",
+    "body-parser": "^1.20.1",
     "connect-flash": "^0.1.1",
-    "connect-mongo": "^4.4.0-rc1",
+    "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "express-session": "^1.17.3",
-    "googleapis": "^39.2.0",
-    "mongoose": "^6.6.0",
+    "googleapis": "^110.0.0",
+    "mongoose": "^6.9.1",
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-oauth2": "^1.6.1",
-    "razorpay": "^2.8.3",
+    "razorpay": "^2.8.4",
     "xid-js": "^1.0.1",
     "xmldom": "^0.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   },
   "bugs": {
     "url": "https://github.com/Ashutosh09-crypto/Exodia-23/issues"
