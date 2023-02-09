@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mx-auto row align-items-center">
+        <form class="mx-auto d-flex flex-column align-items-center" action="/events/joinTeam" method="POST" style="
+        width: 500px;
+    ">
+            <div class="title-section container">
+                <label class="heading m-0 py-2" for="teamId">Team Id</label>
+            </div>
+            <input style="text-align: center;
+                color: black;
+                width: 70%;
+                padding: 5px;
+                font-size: 16px;
+                margin-bottom: 20px;
+                border-radius: 10px;" name="teamId" id="teamId" type="text" placeholder="Enter Team Id" required
+                autocomplete="off">
+
+            <div class="title-section container">
+                <label class="heading m-0 py-2" for="college">College Name</label>
+            </div>
+            <div style="width:100%;margin-bottom: 20px;position: relative;"
+                class="d-flex d-flex-col justify-content-center">
+                <input class="justify-center" style="text-align: center;
+                  color:black;
+                  width: 70%;
+                  padding: 5px;
+                  font-size: 16px;
+                  border-radius: 10px;" name="college" id="college" placeholder="Enter College Name" required
+                    autocomplete="off">
+                <ul class="example" id='college-suggestions'
+                    style="z-index:2;display:none;list-style-type:none;position: absolute;top:100%;margin:5px;background-color: black; width:70%;max-height:calc(5*(1rem + 20px));overflow-y: scroll;">
+                </ul>
+            </div>
+
+            <div class="title-section container">
+                <label class="heading m-0 py-2" for="TeamName">Phone Number</label>
+            </div>
+            <input style="text-align: center;
+                    color:black;
+                    width: 70%;
+                    padding: 5px;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    border-radius: 10px;" placeholder="Phone" name="phone" id="phone" type="text" required
+                pattern="[0-9]{10}" autocomplete="off">
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+                <label class="form-check-label" for="flexCheckCheckedDisabled">
+                    <p>I have understood the <a target="_blank"
+                            href="https://docs.google.com/document/d/17PjtDxJU5LqRwnL999qoHMTUzI2UJyhoOB9MumLFTrc/edit?usp=sharing">terms
+                            and policy</a> of IIT Mandi</p>
+                </label>
+            </div>
+            <input type="submit" class="btn btn-primary" style="border-radius: 30px;
+                        padding: 6px;
+                        margin:40px;
+                        width: 35%;
+                        font-size: 17px;" value="Proceed">
+
+
+        </form>
+    </div>
+</body>
+
+</html>

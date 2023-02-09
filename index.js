@@ -14,6 +14,8 @@ const { authCheck } = require("./middleware/auth");
 // routes included
 const eventRoutes = require("./routes/eventroutes.js")
 const authRoutes = require("./routes/authroutes")
+const navRoutes = require("./routes/navroutes")
+const teamRoutes = require("./routes/teamroutes")
 
 
 const port = process.env.PORT || 5000;
@@ -81,6 +83,8 @@ app.use(flash());
 // routes used
 app.use("/events", eventRoutes)
 app.use("/auth", authRoutes)
+app.use("/", navRoutes)
+app.use("/", teamRoutes)
 
 
 app.get("/", async (req, res) => {

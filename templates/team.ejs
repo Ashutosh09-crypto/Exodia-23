@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | <%= team.name %>
+    </title>
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+        <h1>
+            Team : <%= team.name%>
+        </h1>
+
+        <div class="teaminfo">
+            <div class="title-section">
+                <h2 class="heading m-0 mb-2 py-1" style="font-size: 20px">College : <%= team.college%>
+                </h2>
+            </div>
+            <div class="title-section">
+                <h2 class="heading m-0 mb-2 py-1" style="font-size: 20px">Refferal : <%= team._id%>
+                </h2>
+            </div>
+
+            <div class="title-section">
+                <h2 class="heading m-0 mb-2 py-1" style="font-size: 20px">Sports : <%= team.eventName%>
+                </h2>
+            </div>
+            <div class="title-section">
+                <h2 class="heading m-0 mb-2 py-1" style="font-size: 20px">Leader : <%= leader.firstName%>
+                </h2>
+            </div>
+            <% if(user._id.toString()==leader._id.toString()) { %>
+                <div class="title-section">
+                    <form action="/team/deleteTeam" method="post">
+                        <input type="hidden" value="<%= team._id %>" name="teamId">
+                        <button class="btn btn-primary">Delete Team</button>
+                    </form>
+                </div>
+                <%}%>
+
+        </div>
+</body>
+
+</html>
