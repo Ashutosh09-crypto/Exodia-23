@@ -1,7 +1,7 @@
 
 const router = require("express").Router();
 
-const { findTeamById, findAllMembersOfTeam, findUserById, deleteTeam } = require("../utils")
+const { findTeamById, findAllMembersOfTeam, findUserById, deleteTeam, deleteTeamMember } = require("../utils")
 const { authCheck } = require("../middleware/auth")
 
 router.get("/team", authCheck, async (req, res) => {
@@ -32,6 +32,19 @@ router.post("/team/deleteTeam", authCheck, async (req, res) => {
 
     if (checker)
         req.flash("message", "Team deleted successfully");
+    else
+        req.flash("message", "Sorry, something went wrong");
+    res.redirect("/profile");
+})
+
+router.post("/team/deleteMember", authCheck, async (req, res) => {
+    const teamId = req.body.teamId;
+    const memberId = req.body.memberId;
+
+    let checker = await deleteTeamMember(teamId, memberId, req.user);
+
+    if (checker)
+        req.flash("message", "Member removed successfully");
     else
         req.flash("message", "Sorry, something went wrong");
     res.redirect("/profile");

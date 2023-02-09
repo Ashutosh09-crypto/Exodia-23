@@ -43,6 +43,31 @@
                 <%}%>
 
         </div>
+
+        <div>
+            <h1> Team Members</h1>
+            <% for(let i=0; i<teamMembers.length; i++) {%>
+                <div>
+                    <div>
+                        <span>
+                            <%= teamMembers[i].firstName %>
+                                <% if(user._id.toString()==leader._id.toString()) { %>
+                                    <form method="post" action="/team/deleteMember">
+                                        <input type="hidden" value="<%=teamMembers[i]._id%>" name="memberId">
+                                        <input type="hidden" value="<%=team._id%>" name="teamId">
+                                        <button type="submit" style="background:rgb(0,0,0,0);"><i style="color: red;"
+                                                class="material-icons">clear</i></button>
+                                    </form>
+                                    <% } %>
+                        </span>
+                        <span>
+                            <%= teamMembers[i].email %>
+                        </span>
+                    </div>
+
+                </div>
+                <% } %>
+        </div>
 </body>
 
 </html>

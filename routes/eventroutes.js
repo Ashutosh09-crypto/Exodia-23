@@ -68,7 +68,6 @@ router.get("/joinTeam", authCheck, async (req, res) => {
 router.post("/joinTeam", authCheck, async (req, res) => {
     const { teamId, college, phone } = req.body;
     let checker = await joinTeam(teamId, req);
-
     // req.flash("message", checker);
     res.redirect("/profile");
 })
