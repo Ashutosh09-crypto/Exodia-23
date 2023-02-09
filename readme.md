@@ -5,17 +5,17 @@
 
 * ## [Repository link](https://github.com/Ashutosh09-crypto/Exodia-23)
 
-* ## ![see the image](static\images\Screenshot(220).png)
+* ## ![see the image](static/images/Screenshot(220).png)
 
 
 * ### now click on the fork and fork the repository
-* ## ![see the image](static\images\Screenshot(220)c.png)
+* ## ![see the image](static/images/Screenshot(220)c.png)
 * ### now we have to clone the repository, for that create a new folder in which you want to clone the repository and open git bash in that folder
 * ###  After that go to the repository and click on the ``` code ```, there you will see the clone repository, select ```SSH``` if you have set up using SSH id and then copy the ```URL```.
-## ![see the image](static\images\code.png)
+## ![see the image](static/images/code.png)
 ---
 ---
-## ![see the image](static\images\codessh2.png)
+## ![see the image](static/images/codessh2.png)
 
 * ### Now go to the gitbash and write the following commands:
 * <span style= "color:yellow"> git clone url (jo uper copy kiya tha) </span>
@@ -32,7 +32,7 @@
 
 * ### Now open the cloned folder in the vs code or any othe folder, it should have a similar folder structer like that shown in the image(note: some folders will not be there ignore that)
 * ---
-* ![imgae of the folder structure](static\images\config.png)
+* ![imgae of the folder structure](static/images/config.png)
 * ### now go to the config folder and paste the config.env file there, download that file from the exodia core team group
 
 * ### now in the git bash run the command <span style = "color:violet">npm run dev </span>, this command will run the server.
