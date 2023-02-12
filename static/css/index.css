@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+#homesection {
+	/* Image Location */
+	background-image: url("/images/img10.jpg");
+    height: 100vh;
+
+
+	/* Background image is centered vertically and horizontally at all times */
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+	/* Font Colour */
+	color:white;
+    
+}
+
+#content{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-self: flex-start; */
+    /* margin: 0 auto; */
+   
+    text-align: center;
+   min-height: 70%;
+    
+    align-items: center;
+    justify-content: center;
+    color: white;
+   
+
+    
+    
+}
+
+
+#Aboutsection{
+    background-color: antiquewhite;
+    padding: 5rem;
+    background: url(/images/map2.jpg) no-repeat center center/cover, black;
+    /* background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover; */
+	/* background-color: #464646; */
+	/* Font Colour */
+    background-blend-mode: lighten;
+	color:black;
+    
+}
+
+#about-heading{
+    margin-bottom: 2.5rem;
+    border-left: 10px solid red;
+    padding-left: 2rem;
+}
+
+#Aboutsection p{
+    text-align: justify;
+}

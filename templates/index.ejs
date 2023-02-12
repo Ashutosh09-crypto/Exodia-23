@@ -9,20 +9,59 @@
     <!-- cdn for css of bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 
 <body>
 
-    <!-- importing navbar from the partials -->
-    <%- include('partials/navbar.ejs') %>
-
-        <h1>Exodia-23</h1>
 
 
-        <!-- CDN for js of bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
+    <section id="homesection">
+        <!-- importing navbar from the partials -->
+        <div id="navbar">
+            <%- include('partials/navbar.ejs') %>
+
+        </div>
+        <div id="content">
+
+            <div id="exodia-title">
+                <h1>Exodia-23</h1>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About us section  -->
+    <section id="Aboutsection">
+        <div id="about-heading">
+            <h2>About us</h2>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam possimus explicabo labore repudiandae, ipsa fuga. Voluptates beatae voluptatibus accusamus expedita corrupti nam harum cumque rerum id sit velit corporis adipisci molestiae soluta a iusto nemo temporibus non, qui nostrum fugiat perspiciatis inventore fuga sapiente. Dolorum sapiente tempore odio hic facere repellendus obcaecati est libero excepturi, beatae nulla magnam totam esse optio repellat deserunt facilis enim officiis reprehenderit exercitationem non doloribus aut. Rerum quis quasi, labore cupiditate, quam sit esse natus laboriosam in magnam, ex eos qui praesentium fugiat vel ab excepturi consectetur officia? Hic adipisci obcaecati omnis esse cum. Possimus vitae accusamus non, velit cumque magni ratione eveniet dolor ad sunt eius praesentium quod nam libero nesciunt! Minus explicabo repellat saepe aut accusamus est illum natus odio, sequi labore iste quis? Maiores delectus, voluptatibus sunt officia eos qui at, a quasi dolore et sint tenetur officiis! Aspernatur architecto, aperiam ex cum neque quo et voluptates obcaecati natus. Nostrum tempore odit reiciendis atque laboriosam quis officiis consectetur amet quia nobis, pariatur harum non id voluptas, ex ipsa enim repudiandae aperiam odio provident aut expedita vel eos totam! Explicabo incidunt earum reiciendis magnam qui assumenda sint odio autem beatae labore, obcaecati provident.</p>
+
+    </section >
+    <!-- vide of the exodia  -->
+    <section id="trailersection">
+        <div id="trailer-heading">
+            <h2>
+                Exodia trailer
+            </h2>
+        </div>
+        <div id="ytlink">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/WU_8wcNML3M" title="IIT MANDI OFFICIAL AFTERMOVIE EXODIA 2018" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    
+
+    </section>
+    
+
+
+
+    <!-- CDN for js of bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
