@@ -15,7 +15,7 @@
 	/* Background image is centered vertically and horizontally at all times */
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 	background-size: cover;
 	background-color: #464646;
 	/* Font Colour */
@@ -66,6 +66,7 @@
 
 #Aboutsection p{
     text-align: justify;
+    color: black !important;
 }
 
 #Aboutsection-content{
@@ -82,24 +83,31 @@
     transform: scale(1.1);
 }
 #home-footer{
-    background-color: #464646;
+    /* background-image: url(/images/img6.jpg); */
     padding: 10px 10px;
     justify-content: center;
     text-align: center;
     font-size: 20px;
-    color: white;
+    color: black;
+    height: 60px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #home-footer p{
     margin: 0;
     padding: 0;
+    
 }
 
 #counterclock{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    /* background-color: grey; */
     width: 100%;
     height: 5rem;
     
@@ -108,4 +116,80 @@
 #time{
     display: flex;
     gap: 40px;
+    color: white;
 }
+
+#time .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+}
+
+#time .ap{
+    position: relative;
+    font: 1em;
+    transform: translate(-20px);
+
+}
+
+
+#content-above-footer{
+    height: 380px;
+    background-image: url("/images/img6.jpg");
+    background-position: center center;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-size: cover;
+    filter: drop-shadow(132px 101px 118px black);
+}
+
+
+
+/* styling the icons of the footer  */
+/* Style all font awesome icons */
+.fa {
+    /* padding: 20px; */
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 15px 15px;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram{
+    background-color:white;
+    color: black;
+  }
+
+
+ 

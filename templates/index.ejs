@@ -11,6 +11,9 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <!-- adding icon library  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -41,24 +44,38 @@
                     <div class="circle">
                         <div id="seconds">00</div>
                     </div>
-                    <div class="circle">
-                        <div id="ampam">AM</div>
+                    <div class="ap">
+                        <div id="ampm">AM</div>
                     </div>
                 </div>
                 <script>
-                    let hours = document.getElementbyId('hours');
-                    let minutes = document.getElementbyId('minutes');
-                    let seconds = document.getElementbyId('seconds');
-                    let ampam = Document.getElementbyId('ampam');
+                    setInterval(() => {
+                        let  hours = document.getElementById('hours');
+                        let minutes = document.getElementById('minutes');
+                        let seconds = document.getElementById('seconds');
+                        let ampam = document.getElementById('ampam');
+                        let h = new Date().getHours();
+                        let m = new Date().getMinutes();
+                        let s = new Date().getSeconds();
+                        let am = h >= 12 ? "PM" : "AM";
 
-                    let h = new Date().getHours();
-                    let m = new Date().getMinutes();
-                    let s = new Date().getSeconds();
-                    console.log(h,m, s)
+                        //convert 24hr clock to 12hr clock
+                        if (h > 12) {
+                            h = h - 12;
 
-                    // hours.innerHTML = h;
-                    // minutes.innerHTML = m;
-                    // seconds.innerHTML = s;
+                        }
+                        //adding zero before single digit number
+                        h = (h < 10) ? "0" + h : h;
+                        m = (m < 10) ? "0" + m : m;
+                        s = (s < 10) ? "0" + s : s;
+
+
+                        hours.innerHTML = h;
+                        minutes.innerHTML = m;
+                        seconds.innerHTML = s;
+                        ampm.innerHTML = am;
+
+                    })
                 </script>
 
             </div>
@@ -109,6 +126,25 @@
     
 
     </section> -->
+    <section id="content-above-footer">
+        <div id="footer-title">
+            <h2><span style="color:white">EXODIA-23</span> | IIT Mandi</h2>
+        </div>
+        <div>
+            <p style="color:white">Follow us</p>
+            <div>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            
+            </div>
+        </div>
+
+        <!-- profile card  -->
+        
+       
+
+    </section>
     <footer id="home-footer">
         <p>
             all rights are reserved
