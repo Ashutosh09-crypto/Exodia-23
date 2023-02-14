@@ -50,7 +50,7 @@
                 </div>
                 <script>
                     setInterval(() => {
-                        let  hours = document.getElementById('hours');
+                        let hours = document.getElementById('hours');
                         let minutes = document.getElementById('minutes');
                         let seconds = document.getElementById('seconds');
                         let ampam = document.getElementById('ampam');
@@ -128,21 +128,81 @@
     </section> -->
     <section id="content-above-footer">
         <div id="footer-title">
-            <h2><span style="color:white">EXODIA-23</span> | IIT Mandi</h2>
-        </div>
-        <div>
-            <p style="color:white">Follow us</p>
-            <div>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-            
-            </div>
+            <h2><span style="color:white ">EXODIA-23</span> | IIT Mandi</h2>
         </div>
 
-        <!-- profile card  -->
-        
-       
+        <p style="color:white">Follow us</p>
+        <div id="footer-content">
+            <div id="footer-links">
+
+
+                <div>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+
+                </div>
+            </div>
+
+            <!-- profile card  -->
+            <div class="profile-card">
+                <div class="profile-picture-container">
+                    <img src="/images/img3.jpg" alt="Profile Picture" class="profile-picture">
+                </div>
+                <div class="profile-details">
+                    <h2>John Doe</h2>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-picture-container">
+                    <img src="/images/img2.jpg" alt="Profile Picture" class="profile-picture">
+                </div>
+                <div class="profile-details">
+                    <h2>John Doe</h2>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-picture-container">
+                    <img src="/images/img8.jpg" alt="Profile Picture" class="profile-picture">
+                </div>
+                <div class="profile-details">
+                    <h2>John Doe</h2>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+        </div>
+        <!-- <script>
+            // Optional: preload the image to prevent flickering
+            const img = new Image();
+            img.src = 'path/to/image.jpg';
+
+            // Get the profile picture element
+            const profilePicture = document.querySelector('.profile-picture');
+
+            // Wait for the image to load, then center it vertically and horizontally
+            img.addEventListener('load', function () {
+                const aspectRatio = this.width / this.height;
+                if (aspectRatio > 1) {
+                    profilePicture.style.width = '100%';
+                    profilePicture.style.height = 'auto';
+                } else {
+                    profilePicture.style.width = 'auto';
+                    profilePicture.style.height = '100%';
+                }
+                profilePicture.style.top = `calc(50% - ${profilePicture.offsetHeight / 2}px)`;
+                profilePicture.style.left = `calc(50% - ${profilePicture.offsetWidth / 2}px)`;
+            });
+
+            // Get the profile card element
+            const profileCard = document.querySelector('.profile-card');
+
+            // Wait for the image to load, then add the glassy effect
+            img.addEventListener('load', function () {
+                profileCard.style.backgroundImage = `url(${img.src})`;
+            });
+        </script> -->
 
     </section>
     <footer id="home-footer">
