@@ -269,22 +269,9 @@ p {
   /* padding: 2px; */
   
 }
-@media only screen and (min-width:2000px){
-  .cards{
-
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-}
 
 
-@media only screen and (max-width:480px){
-  .cards{
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 
 
 .card {
@@ -389,6 +376,12 @@ p {
 }    
 
 
+#countdown-timer{
+  background-color: black;
+}
+
+
+
 /* card css ends */
 
 @media only screen and (max-width:480px) {
@@ -409,6 +402,28 @@ p {
     justify-content: center;
     align-items: center;
   }
+  .cards{
+    display: flex;
+    flex-direction: column;
+  }
 
+  #countdown{
+    font-size: 23px;
+  }
 
 }
+
+
+
+@media only screen and (min-width:2000px){
+  .cards{
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #countdown{
+    font-size: 33px;
+  }
+
+}
+
