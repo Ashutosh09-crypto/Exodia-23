@@ -25,7 +25,7 @@
         <!-- adding vide  -->
         <div id="video-bg">
             <video autoplay loop muted>
-              <source src="../images/ship.mp4" type="video/mp4">
+                <source src="../images/ship.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -103,13 +103,13 @@
                 tempore odit reiciendis atque laboriosam quis officiis consectetur amet quia nobis, pariatur harum non
                 id voluptas, ex ipsa enim repudiandae aperiam odio provident aut expedita vel eos totam! Explicabo
                 incidunt earum reiciendis magnam qui assumenda sint odio autem beatae labore, obcaecati provident.</p>
-            <div id="ytlink">
+            <!-- <div id="ytlink">
                 <iframe style="border-radius: 5px;" width="640" height="360"
                     src="https://www.youtube.com/embed/WU_8wcNML3M" title="IIT MANDI OFFICIAL AFTERMOVIE EXODIA 2018"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
-            </div>
+            </div> -->
         </div>
 
     </section>
@@ -126,147 +126,96 @@
     
 
     </section> -->
-    <section id="content-above-footer" >
-        <div id="footer-title ">
-            <div class="exodia">
+    <section id="footer-content">
+        <!-- profile cards -->
+        <div id="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-title-counter">
+                        <h2><span style="color:white ">EXODIA-23</span> | IIT Mandi</h2>
+                        <p style="color:white">Follow us</p>
+                        <div id="footer-links">
+                            <div>
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-instagram"></a>
 
-                <h2><span style="color:white ">EXODIA-23</span> | IIT Mandi</h2>
-                <p style="color:white">Follow us</p>
-                <div id="footer-content">
-                    <div id="footer-links">
-
-
-                        <div>
-                            <a href="#" class="fa fa-facebook"></a>
-                            <a href="#" class="fa fa-twitter"></a>
-                            <a href="#" class="fa fa-instagram"></a>
-
+                            </div>
                         </div>
+
+                        <!-- website footprint  -->
+                        <div id="counter">
+                            <p style="color:red">Number of visitors:</p>
+                            <span id="count">0</span>
+                        </div>
+
+
+                    </div>
+                    <div class="col cards">
+                        <ul class="cards">
+                            <li>
+                                <a href="" class="card">
+                                    <img src="/images/img2.jpg" class="card__image" alt="" />
+                                    <div class="card__overlay">
+                                        <div class="card__header">
+                                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                                <path /></svg>
+                                            <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+                                            <div class="card__header-text">
+                                                <h3 class="card__title">Phone Number</h3>
+
+                                            </div>
+                                        </div>
+                                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Asperiores, blanditiis?</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="card">
+                                    <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+                                    <div class="card__overlay">
+                                        <div class="card__header">
+                                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                                <path /></svg>
+                                            <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+                                            <div class="card__header-text">
+                                                <h3 class="card__title">Mail@iitmandi.ac.in</h3>
+
+                                            </div>
+                                        </div>
+                                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Asperiores, blanditiis?</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="card">
+                                    <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+                                    <div class="card__overlay">
+                                        <div class="card__header">
+                                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                                <path /></svg>
+                                            <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+                                            <div class="card__header-text">
+                                                <h3 class="card__title">Mail@iitmandi.ac.in</h3>
+
+                                            </div>
+                                        </div>
+                                        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Asperiores, blanditiis?</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
 
-                <!-- website footprint  -->
-                <div id="counter">
-                    <p style="color:red">Number of visitors:</p>
-                    <span id="count">0</span>
-                </div>
-
-                <!-- javascript for the counter  -->
-                <script>
-                    // Get the counter element
-                    var counter = document.getElementById("count");
-
-                    // Check if there's a count stored in local storage
-                    var count = localStorage.getItem("count");
-
-                    // If there's no count, set it to 0
-                    if (!count) {
-                        count = 0;
-                    }
-
-                    // Update the counter on the page
-                    counter.innerHTML = count;
-
-                    // Increment the count and update the counter
-                    count++;
-                    localStorage.setItem("count", count);
-                    counter.innerHTML = count
-                </script>
-
             </div>
-            <!-- profile card  -->
-            <div class="profile-card">
-                <div class="profile-picture-container">
-                    <img src="/images/img3.jpg" alt="Profile Picture" class="profile-picture">
-                </div>
-                <div class="profile-details">
-                    <h6>Ankit</h6>
-                    <p>Email</p>
-                    <p>phone</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-picture-container">
-                    <img src="/images/img2.jpg" alt="Profile Picture" class="profile-picture">
-                </div>
-                <div class="profile-details">
-                    <h6>Ankit</h6>
-                    <p>Email</p>
-                    <p>phone</p>
-
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-picture-container">
-                    <img src="/images/img8.jpg" alt="Profile Picture" class="profile-picture">
-                </div>
-                <div class="profile-details">
-                    <h6>Sandeep</h6>
-                    <p>Email</p>
-                    <p>phone</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="profile-picture-container">
-                    <img src="/images/img8.jpg" alt="Profile Picture" class="profile-picture">
-                </div>
-                <div class="profile-details">
-                    <h6>Sandeep</h6>
-                    <!-- <p>Sandeep</p> -->
-                    <p>Email:sandeep@iitm2003gmail.com</p>
-                    <p>contact:9810718692</p>
-                    <p>position of resposibility:web developer</p>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- <p style="color:white">Follow us</p>
-        <div id="footer-content">
-            <div id="footer-links">
-
-
-                <div>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-
-                </div>
-            </div>
-
-        </div> -->
-        <!-- <script>
-            // Optional: preload the image to prevent flickering
-            const img = new Image();
-            img.src = 'path/to/image.jpg';
-
-            // Get the profile picture element
-            const profilePicture = document.querySelector('.profile-picture');
-
-            // Wait for the image to load, then center it vertically and horizontally
-            img.addEventListener('load', function () {
-                const aspectRatio = this.width / this.height;
-                if (aspectRatio > 1) {
-                    profilePicture.style.width = '100%';
-                    profilePicture.style.height = 'auto';
-                } else {
-                    profilePicture.style.width = 'auto';
-                    profilePicture.style.height = '100%';
-                }
-                profilePicture.style.top = `calc(50% - ${profilePicture.offsetHeight / 2}px)`;
-                profilePicture.style.left = `calc(50% - ${profilePicture.offsetWidth / 2}px)`;
-            });
-
-            // Get the profile card element
-            const profileCard = document.querySelector('.profile-card');
-
-            // Wait for the image to load, then add the glassy effect
-            img.addEventListener('load', function () {
-                profileCard.style.backgroundImage = `url(${img.src})`;
-            });
-        </script> -->
-
     </section>
+
+
     <footer id="home-footer">
         <p>
             © Copyright <b>Exodia | IIT Mandi </b>.All Rights Reserved
@@ -281,6 +230,28 @@
     <!-- CDN for js of bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+
+    <!-- javascript for the counter  -->
+    <script>
+        // Get the counter element
+        var counter = document.getElementById("count");
+
+        // Check if there's a count stored in local storage
+        var count = localStorage.getItem("count");
+
+        // If there's no count, set it to 0
+        if (!count) {
+            count = 0;
+        }
+
+        // Update the counter on the page
+        counter.innerHTML = count;
+
+        // Increment the count and update the counter
+        count++;
+        localStorage.setItem("count", count);
+        counter.innerHTML = count
     </script>
 
 </body>
