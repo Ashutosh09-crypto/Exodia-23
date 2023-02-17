@@ -100,13 +100,21 @@
 
 }
 
-#ytlink {
-  margin-left: 4rem;
-  transition: transform 0.5s ease-in-out;
+#para{
+  /* background-color: #55ACEE; */
+  padding-right: 2rem;
 }
 
-#ytlink:hover {
-  transform: scale(1.1);
+
+#video-link {
+  /* margin-left: 4rem; */
+  transition: transform 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+#video-link:hover {
+  transform: scale(1.08);
+  border: 2px solid white;
 }
 
 #home-footer {
@@ -213,6 +221,7 @@ p {
   /* justify-content: space-between; */
   
   /* filter: drop-shadow(132px 101px 118px black); */
+  
 }
 
 
@@ -379,7 +388,9 @@ p {
 #countdown-timer{
   background-color: black;
 }
-
+#countdown{
+  font-size: 30px;
+}
 
 
 /* card css ends */
@@ -388,11 +399,11 @@ p {
   #footer-title {
     /* flex: 1; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     /* margin-top: 2rem; */
 
   }
