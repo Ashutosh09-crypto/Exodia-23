@@ -3,6 +3,10 @@
 
 
 
+.js-image{
+  width: 50%;
+  height: 400px;
+}
 
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
