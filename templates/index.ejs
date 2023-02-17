@@ -33,54 +33,43 @@
             </div>
 
             <!-- counter for the website  -->
-            <div id="counterclock">
-                <div id="time">
-                    <div class="circle">
-                        <div id="hours">00</div>
-                    </div>
-                    <div class="circle">
-                        <div id="minutes">00</div>
-                    </div>
-                    <div class="circle">
-                        <div id="seconds">00</div>
-                    </div>
-                    <div class="ap">
-                        <div id="ampm">AM</div>
-                    </div>
-                </div>
-                <script>
-                    setInterval(() => {
-                        let hours = document.getElementById('hours');
-                        let minutes = document.getElementById('minutes');
-                        let seconds = document.getElementById('seconds');
-                        let ampam = document.getElementById('ampam');
-                        let h = new Date().getHours();
-                        let m = new Date().getMinutes();
-                        let s = new Date().getSeconds();
-                        let am = h >= 12 ? "PM" : "AM";
-
-                        //convert 24hr clock to 12hr clock
-                        if (h > 12) {
-                            h = h - 12;
-
-                        }
-                        //adding zero before single digit number
-                        h = (h < 10) ? "0" + h : h;
-                        m = (m < 10) ? "0" + m : m;
-                        s = (s < 10) ? "0" + s : s;
-
-
-                        hours.innerHTML = h;
-                        minutes.innerHTML = m;
-                        seconds.innerHTML = s;
-                        ampm.innerHTML = am;
-
-                    })
-                </script>
+            <div id="countdown-timer">
+                <div id="countdown"></div>
 
             </div>
 
+
         </div>
+        <script>
+            // Set the date and time for the countdown
+            var countDownDate = new Date("May 5 , 2023 12:00:00").getTime();
+
+            // Update the countdown every second
+            var countdown = setInterval(function () {
+
+                // Get the current date and time
+                var now = new Date().getTime();
+
+                // Calculate the distance between now and the countdown date
+                var distance = countDownDate - now;
+
+                // Calculate the days, hours, minutes, and seconds remaining
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the countdown in the "countdown" element
+                document.getElementById("countdown").innerHTML = days + "&nbsp;days&nbsp;&nbsp;" + hours + "&nbsp;hrs&nbsp;&nbsp;" +
+                    minutes + "&nbsp;mins&nbsp;&nbsp;" + seconds + "&nbsp;sec&nbsp;&nbsp;";
+
+                // If the countdown is finished, display a message
+                if (distance < 0) {
+                    clearInterval(countdown);
+                    document.getElementById("countdown").innerHTML = "Event is live now!";
+                }
+            }, 1000);
+        </script>
     </section>
 
     <!-- About us section  -->
@@ -128,15 +117,33 @@
     </section> -->
     <section id="content-above-footer">
         <div id="footer-title">
-            <h2><span style="color:white ">EXODIA-23</span> | IIT Mandi</h2>
+            <div>
+
+                <h2><span style="color:white ">EXODIA-23</span> | IIT Mandi</h2>
+                <p style="color:white">Follow us</p>
+                <div id="footer-content">
+                    <div id="footer-links">
+
+
+                        <div>
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <!-- profile card  -->
             <div class="profile-card">
                 <div class="profile-picture-container">
                     <img src="/images/img3.jpg" alt="Profile Picture" class="profile-picture">
                 </div>
                 <div class="profile-details">
-                    <h2>John Doe</h2>
-                    <p>Web Developer</p>
+                    <h6>Ankit</h6>
+                    <p>Email</p>
+                    <p>phone</p>
                 </div>
             </div>
             <div class="profile-card">
@@ -144,8 +151,10 @@
                     <img src="/images/img2.jpg" alt="Profile Picture" class="profile-picture">
                 </div>
                 <div class="profile-details">
-                    <h2>John Doe</h2>
-                    <p>Web Developer</p>
+                    <h6>Ankit</h6>
+                    <p>Email</p>
+                    <p>phone</p>
+
                 </div>
             </div>
             <div class="profile-card">
@@ -153,8 +162,9 @@
                     <img src="/images/img8.jpg" alt="Profile Picture" class="profile-picture">
                 </div>
                 <div class="profile-details">
-                    <h2>John Doe</h2>
-                    <p>Web Developer</p>
+                    <h6>Sandeep</h6>
+                    <p>Email</p>
+                    <p>phone</p>
                 </div>
             </div>
             <div class="profile-card">
@@ -162,14 +172,17 @@
                     <img src="/images/img8.jpg" alt="Profile Picture" class="profile-picture">
                 </div>
                 <div class="profile-details">
-                    <h2>John Doe</h2>
-                    <p>Web Developer</p>
+                    <h6>Sandeep</h6>
+                    <!-- <p>Sandeep</p> -->
+                    <p>Email:sandeep@iitm2003gmail.com</p>
+                    <p>contact:9810718692</p>
+                    <p>position of resposibility:web developer</p>
                 </div>
             </div>
         </div>
-        
 
-        <p style="color:white">Follow us</p>
+
+        <!-- <p style="color:white">Follow us</p>
         <div id="footer-content">
             <div id="footer-links">
 
@@ -182,7 +195,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!-- <script>
             // Optional: preload the image to prevent flickering
             const img = new Image();
@@ -217,7 +230,7 @@
     </section>
     <footer id="home-footer">
         <p>
-            all rights are reserved
+            © Copyright <b>Exodia | IIT Mandi </b>.All Rights Reserved
         </p>
     </footer>
 
