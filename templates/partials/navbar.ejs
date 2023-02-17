@@ -1,23 +1,17 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                <a class="nav-link" href="/events">EVENTS</a>
 
-                <% if(!authenticated){ %>
-                    <a class="nav-link" href="/auth/google">LOGIN</a>
-                    <%}else{%>
-                        <a class="nav-link" href="/profile">PROFILE</a>
-                        <a class="nav-link" href="/auth/logout">LOGOUT</a>
-                        <%}%>
+<a href="https://front.codes/" class="logo" target="_blank">
+    <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+</a>
 
-            </div>
-        </div>
-    </div>
-</nav>
+  <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  <label for="menu-icon"></label>
+  
+  <nav class="nav"> 		
+      <ul class="pt-5">
+          <li><a class="nav-link active" aria-current="page" href="#">HOME</a></li>
+          <li><a class="nav-link" href="/events">EVENTS</a></li>
+          
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+  </nav>
