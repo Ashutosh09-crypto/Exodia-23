@@ -27,6 +27,10 @@
   color: white;
 
 }
+#exodia-title h1{
+  color: rgb(254, 38, 38) !important;
+  font-size: 60px;
+}
 
 #video-bg {
   position: absolute;
@@ -110,6 +114,8 @@
   /* margin-left: 4rem; */
   transition: transform 0.5s ease-in-out;
   border-radius: 5px;
+  width:500px ;
+  height:315px;
 }
 
 #video-link:hover {
@@ -209,9 +215,10 @@ p {
   /* color: #999; */
 }
 #footer-content {
+  background-color: black;
   padding: 20px;
   min-height: 380px;
-  background-image: url("/images/img6.jpg");
+  /* background-image: url("/images/img6.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
@@ -385,9 +392,7 @@ p {
 }    
 
 
-#countdown-timer{
-  background-color: black;
-}
+
 #countdown{
   font-size: 30px;
 }
@@ -422,6 +427,33 @@ p {
     font-size: 23px;
   }
 
+
+  /* About section  */
+  #Aboutsection-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+  
+  }
+  #video-link{
+    width: 300px;
+    height: 200px;
+  }
+
+  #Aboutsection{
+    padding: 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    
+  }
+  #para{
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+
 }
 
 
@@ -435,6 +467,24 @@ p {
   #countdown{
     font-size: 33px;
   }
+}
 
+@media only screen and (min-width:481px) and (max-width:720px){
+  /* About section  */
+  #Aboutsection-content {
+    color: red;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+#video-link{
+  width: 320px;
+  height: 250px;
+  margin-top: 1.5rem;
+  
+}
 }
 
