@@ -21,6 +21,15 @@
 
 
     <section id="homesection">
+
+        <!-- adding vide  -->
+        <div id="video-bg">
+            <video autoplay loop muted>
+              <source src="../images/ship.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
         <!-- importing navbar from the partials -->
         <div id="navbar">
             <%- include('partials/navbar.ejs') %>
@@ -40,6 +49,7 @@
 
 
         </div>
+        <!-- javascript code for the counter  -->
         <script>
             // Set the date and time for the countdown
             var countDownDate = new Date("May 5 , 2023 12:00:00").getTime();
@@ -60,7 +70,8 @@
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Display the countdown in the "countdown" element
-                document.getElementById("countdown").innerHTML = days + "&nbsp;days&nbsp;&nbsp;" + hours + "&nbsp;hrs&nbsp;&nbsp;" +
+                document.getElementById("countdown").innerHTML = days + "&nbsp;days&nbsp;&nbsp;" + hours +
+                    "&nbsp;hrs&nbsp;&nbsp;" +
                     minutes + "&nbsp;mins&nbsp;&nbsp;" + seconds + "&nbsp;sec&nbsp;&nbsp;";
 
                 // If the countdown is finished, display a message
@@ -115,9 +126,9 @@
     
 
     </section> -->
-    <section id="content-above-footer">
-        <div id="footer-title">
-            <div>
+    <section id="content-above-footer" >
+        <div id="footer-title ">
+            <div class="exodia">
 
                 <h2><span style="color:white ">EXODIA-23</span> | IIT Mandi</h2>
                 <p style="color:white">Follow us</p>
@@ -133,6 +144,34 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- website footprint  -->
+                <div id="counter">
+                    <p style="color:red">Number of visitors:</p>
+                    <span id="count">0</span>
+                </div>
+
+                <!-- javascript for the counter  -->
+                <script>
+                    // Get the counter element
+                    var counter = document.getElementById("count");
+
+                    // Check if there's a count stored in local storage
+                    var count = localStorage.getItem("count");
+
+                    // If there's no count, set it to 0
+                    if (!count) {
+                        count = 0;
+                    }
+
+                    // Update the counter on the page
+                    counter.innerHTML = count;
+
+                    // Increment the count and update the counter
+                    count++;
+                    localStorage.setItem("count", count);
+                    counter.innerHTML = count
+                </script>
 
             </div>
             <!-- profile card  -->
