@@ -347,7 +347,7 @@ p {
 
 .card__arc path {
   fill: var(--surface-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  /* d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
 }       
 
 .card:hover .card__header {
@@ -420,7 +420,25 @@ p {
   }
   .cards{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .card{
+    width: 193px;
+    height: 187px;
+    
+
+  }
+  .card__header{
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 10px;
+    height: 109px;
+    gap: 0 !important;
+    /* height: auto; */
+
   }
 
   #countdown{
@@ -484,6 +502,12 @@ p {
   width: 320px;
   height: 250px;
   margin-top: 1.5rem;
+  
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 }
