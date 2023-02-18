@@ -84,15 +84,13 @@
   right: 50px;
   display: block;
   width: 80px;
-
-  background: url('/images/rolledMap.jpg') no-repeat center center/cover;
-
   height: 80px;
   padding: 0;
   margin: 0;
   z-index: 9;
   overflow: hidden;
   box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+  background: url('/images/rolledMap.jpg') no-repeat center center/cover;
   /* background-color: #1329cf; */
   /* background: url('/images/map2.jpg') no-repeat center center/cover; */
   /* animation: border-transform 7s linear infinite; */
@@ -109,7 +107,7 @@
   height: 2px;
   /* background-color: #6565d5; */
   border-width: 0;
-  background: url('/static/images/rolledMap.jpg') no-repeat center center/cover;
+  /* background: url('/static/images/rolledMap.jpg') no-repeat center center/cover; */
   transition: border-width 100ms 340ms ease,
     top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
     height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -127,18 +125,22 @@
   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
 } */
 
+/* this css is zooming in the navbar button */
+
 .menu-icon:checked~.nav {
   animation-play-state: paused;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  width: 200%;
-  height: 200%;
+  background-image: url('/images/map2.jpg');
+  width: 70%;
+  height: 60%;
   transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
     right 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
     transform 250ms 700ms ease,
     width 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
-    height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+    height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-image 351ms 600ms ease;
 }
 
 .nav ul {
