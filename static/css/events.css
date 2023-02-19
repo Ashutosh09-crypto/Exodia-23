@@ -14,7 +14,7 @@
 .slider {
     width: 100%;
     height: 100%;
-    background: red;
+    /* background: red; */
     position: absolute;
     left: 0;
     top: 0;
@@ -40,9 +40,9 @@
 
 /* each slide background color */
 .slide1 {
-    background: url("/images/img6.jpg") center center/cover no-repeat;
-    /* background-repeat: no-repeat;
-    background-size: auto; */
+     background: url("/images/img6.jpg") center center/cover no-repeat; 
+     background-repeat: no-repeat;
+    background-size: auto; 
     left: 0;
 }
 
@@ -235,4 +235,28 @@
 .right-left{
     width: 64px;
     height: 71px;
+  
 }
+
+/* adding the navbar by increasing the z-index of it  */
+
+
+.bg-body-tertiary{
+    z-index: 5000;
+    
+}
+
+/* cloud animation gif  */
+#pokemon{
+    /* display: none; */
+    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    z-index: 4500000;
+  }
+  #pokemon{
+    float: right;
+  
+  }
+
+
