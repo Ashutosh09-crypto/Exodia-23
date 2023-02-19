@@ -1,7 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const session = require("express-session")
-const path = require("path")
 const passport = require("passport")
 const bodyParser = require("body-parser")
 const connectDB = require("./config/db");

@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 /* Slider wrapper*/
 .css-slider-wrapper {
     display: block;
     background: #FFF;
     overflow: hidden;
     position: absolute;
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* #video-bg {
+    position: fixed;
+    top: 0;
+>>>>>>> ab6249d9ae364bf9358ad6db5b8e77e64c817714
     left: 0;
     right: 0;
     top: 0;

@@ -1,4 +1,4 @@
-:root{
+:root {
   --surface-color: #fff;
   --curve: 40;
 }
@@ -27,9 +27,11 @@
   color: white;
 
 }
-#exodia-title h1{
+
+#exodia-title h1 {
   color: rgb(254, 38, 38) !important;
   font-size: 60px;
+  font-family: bonn;
 }
 
 #video-bg {
@@ -104,7 +106,7 @@
 
 }
 
-#para{
+#para {
   /* background-color: #55ACEE; */
   padding-right: 2rem;
 }
@@ -114,8 +116,8 @@
   /* margin-left: 4rem; */
   transition: transform 0.5s ease-in-out;
   border-radius: 5px;
-  width:500px ;
-  height:315px;
+  width: 500px;
+  height: 315px;
 }
 
 #video-link:hover {
@@ -214,6 +216,7 @@ p {
   margin: 0;
   /* color: #999; */
 }
+
 #footer-content {
   background-color: black;
   padding: 20px;
@@ -226,9 +229,9 @@ p {
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: space-between; */
-  
+
   /* filter: drop-shadow(132px 101px 118px black); */
-  
+
 }
 
 
@@ -257,9 +260,24 @@ p {
 }
 
 #count {
-  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
-  color: white;
+  padding-top: 5px;
+  font-size: 50px;
+  color: black;
+}
+
+/* Regiostration counts */
+#Registrations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding-top: 5px;
+  font-size: 50px;
+  color: black;
 }
 
 
@@ -269,7 +287,7 @@ p {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  
+
   /* gap: 2rem; */
   /* margin: 4rem 5vw; */
   margin-bottom: 0;
@@ -283,7 +301,7 @@ p {
   position: relative;
   flex-wrap: wrap;
   /* padding: 2px; */
-  
+
 }
 
 
@@ -303,9 +321,9 @@ p {
   text-decoration: none;
 }
 
-.card__image {      
+.card__image {
   width: 100%;
-  height:auto;
+  height: auto;
 }
 
 .card__overlay {
@@ -313,9 +331,9 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;      
-  border-radius: calc(var(--curve) * 1px);    
-  background-color: var(--surface-color);      
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
 }
@@ -330,7 +348,7 @@ p {
   align-items: center;
   gap: 2em;
   padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
   background-color: var(--surface-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
@@ -341,14 +359,14 @@ p {
   height: 80px;
   position: absolute;
   bottom: 100%;
-  right: 0;      
+  right: 0;
   z-index: 1;
 }
 
 .card__arc path {
   fill: var(--surface-color);
   /* d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
-}       
+}
 
 .card:hover .card__header {
   transform: translateY(0);
@@ -357,8 +375,8 @@ p {
 .card__thumb {
   flex-shrink: 0;
   width: 50px;
-  height: 50px;      
-  border-radius: 50%;      
+  height: 50px;
+  border-radius: 50%;
 }
 
 .card__title {
@@ -370,9 +388,9 @@ p {
 .card__tagline {
   display: block;
   margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #D7BDCA;  
+  font-family: "MockFlowFont";
+  font-size: .8em;
+  color: #D7BDCA;
 }
 
 .card__status {
@@ -384,19 +402,93 @@ p {
   padding: 0 2em 2em;
   margin: 0;
   color: #D7BDCA;
-  font-family: "MockFlowFont";   
+  font-family: "MockFlowFont";
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}    
+}
 
 
 
-#countdown{
+#countdown {
   font-size: 30px;
 }
 
+
+/* counts for visitors and registrations */
+.counts {
+  width: 100%;
+  height: 700px;
+  background: url("/images/Counters.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.counters {
+  color: red;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 400px;
+}
+
+.counter-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 280px;
+  background: url("/images/count4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* FAQ'S */
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab&family=Spartan:wght@400;700&display=swap");
+
+.faq-container {
+  margin: auto;
+  width: 60%;
+  /* background-color: black; */
+  /* color: white; */
+}
+
+h1 {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-bottom: 2px solid #6d6b6b;
+}
+
+.question {
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  color: #5c5a5a;
+}
+
+.icon-main {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+
+.non-active {
+  display: none;
+}
+
+.answer {
+  font-size: 17px;
+  font-family: "Spartan", sans-serif;
+}
 
 /* card css ends */
 
@@ -412,26 +504,30 @@ p {
     /* margin-top: 2rem; */
 
   }
-  #footer-content{
+
+  #footer-content {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
   }
-  .cards{
+
+  .cards {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    
-  }
-  .card{
-    width: 193px;
-    height: 187px;
-    
 
   }
-  .card__header{
+
+  .card {
+    width: 193px;
+    height: 187px;
+
+
+  }
+
+  .card__header {
     display: flex;
     /* flex-wrap: wrap; */
     padding: 10px;
@@ -441,7 +537,7 @@ p {
 
   }
 
-  #countdown{
+  #countdown {
     font-size: 23px;
   }
 
@@ -453,62 +549,79 @@ p {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    
-  
   }
-  #video-link{
+
+  #video-link {
     width: 300px;
     height: 200px;
   }
 
-  #Aboutsection{
+  #Aboutsection {
     padding: 1.5rem;
     /* margin-bottom: 1.5rem; */
-    
+
   }
-  #para{
+
+  #para {
     padding-right: 0;
     margin-bottom: 1.5rem;
   }
-
-
+  .counters{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    align-items: center;
+  }
+  .counter-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 230px;
+    /* background: url("/images/count4.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 
 
-@media only screen and (min-width:2000px){
-  .cards{
+@media only screen and (min-width:2000px) {
+  .cards {
 
     display: flex;
     flex-wrap: wrap;
   }
-  #countdown{
+
+  #countdown {
     font-size: 33px;
   }
 }
 
-@media only screen and (min-width:481px) and (max-width:720px){
+@media only screen and (min-width:481px) and (max-width:720px) {
+
   /* About section  */
   #Aboutsection-content {
     color: red;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    
-}
-#video-link{
-  width: 320px;
-  height: 250px;
-  margin-top: 1.5rem;
-  
-}
-.cards{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-}
 
+  }
+
+  #video-link {
+    width: 320px;
+    height: 250px;
+    margin-top: 1.5rem;
+
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
