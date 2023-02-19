@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,34 +18,67 @@
     <!-- importing navbar from the partials -->
     <%- include('partials/navbar.ejs') %>
 
-        <!-- <ul>
-            <h2>Event Details</h2> -->
-            <!-- <a href="/events/joinTeam">Join Team</a>
+    <!-- image crousel  -->
+    <div class="css-slider-wrapper">
 
-            <% for(let i=0;i < events.length;i++) {%>
-                <li>
-                    <a href='/events/event?event=<%=events[i].name %>'>
-                        <%= events[i].name%>
-                    </a>
-                </li>
-                 <%}%> -->
-        <!-- </ul>  -->
+        <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+        <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+        <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+        <input type="radio" name="slider" class="slide-radio4" id="slider_4">
 
-        <!-- Events section  -->
-        <div id="video-bg">
-            <video autoplay loop muted>
-              <source src="../images/ship.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="h1">
-            <h1 id="h1" data-text="&nbsp; Exodia Events &nbsp;">&nbsp; Exodia Events &nbsp;</h1>
-            
+
+        <div class="slider-pagination">
+
+            <label for="slider_1" class="page1"></label>
+            <label for="slider_2" class="page2"></label>
+            <label for="slider_3" class="page3"></label>
+            <label for="slider_4" class="page4"></label>
         </div>
 
+        <div class="next control">
+            <label for="slider_1" class="numb1"><img class="right-left right" src="/images/piratenext.png"></label>
+            <label for="slider_2" class="numb2"><img class="right-left right" src="/images/piratenext.png"></label>
+            <label for="slider_3" class="numb3"><img class="right-left right" src="/images/piratenext.png"></label>
+            <label for="slider_4" class="numb4"><img class="right-left right" src="/images/piratenext.png"></label>
+        </div>
+        <div class="previous control">
+            <label for="slider_1" class="numb1"><img class="right-left" src="/images/piratenext.png"></label>
+            <label for="slider_2" class="numb2"><img class="right-left" src="/images/piratenext.png"></label>
+            <label for="slider_3" class="numb3"><img class="right-left" src="/images/piratenext.png"></label>
+            <label for="slider_4" class="numb4"><img class="right-left" src="/images/piratenext.png"></label>
+        </div>
+
+
+        <div class="slider slide1">
+            <div>
+                <h2>Css Based slider</h2>
+                <a href="#" class="button">Download</a>
+            </div>
+        </div>
+        <div class="slider slide2">
+            <div>
+                <h2>CSS Slider without use of any javascript or jQuery</h2>
+                <a href="#" class="button">Download</a>
+            </div>
+        </div>
+        <div class="slider slide3">
+            <div>
+                <h2>Full screen animation slider</h2>
+                <a href="#" class="button">Download</a>
+            </div>
+        </div>
+        <div class="slider slide4">
+            <div>
+                <h2>css3 slider</h2>
+                <a href="#" class="button">Download</a>
+            </div>
+        </div>
+    </div>
+
+    </section>
 
 
 
-       
 
 
 
@@ -52,15 +86,35 @@
 
 
 
-        <!-- CDN for js of bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
-        
-       
-         
 
-         
+
+    <!-- CDN for js of bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery  -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+//         $('.right').on('click', function () {
+//             $(this).animate({
+
+                
+//             }, 5000, function() {
+//   // Animation complete.
+//   });
+
+//         });
+
+
+
+    </script>
+
+
+
+
 </body>
 
 </html>
