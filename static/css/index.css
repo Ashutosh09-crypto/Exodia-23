@@ -3,6 +3,9 @@
   --curve: 40;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Rye&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,28 +13,25 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 #homesection {
-  /* Image Location */
-  /* background-video: url("/images/img10.jpg"); */
   height: 100vh;
-
-
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: cover;
-  /* background-color: #464646; */
-  /* Font Colour */
   color: white;
 
 }
 
 #exodia-title h1 {
   color: rgb(254, 38, 38) !important;
-  font-size: 60px;
-  font-family: bonn;
+  font-size: 100px;
+  font-family: 'Henny Penny', cursive;
 }
 
 #video-bg {
@@ -45,13 +45,10 @@
 }
 
 #video-bg video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-
 }
 
 #content {
@@ -78,14 +75,10 @@
   background-color: antiquewhite;
   padding: 5rem;
   background: url(/images/map2.jpg) no-repeat center center/cover, black;
-  /* background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover; */
-  /* background-color: #464646; */
-  /* Font Colour */
+  font-family: 'Rye', cursive;
   background-blend-mode: lighten;
   color: black;
+  /* height: 100vh; */
 
 }
 
@@ -180,6 +173,7 @@
   text-decoration: none;
   border-radius: 50%;
   padding: 15px 15px;
+  margin: 5px;
 }
 
 /* Add a hover effect if you want */
@@ -314,11 +308,11 @@ p {
   position: relative;
   display: block;
   margin: 5px 7px;
-
   /* height: 100%;   */
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
+
 }
 
 .card__image {
@@ -336,6 +330,12 @@ p {
   background-color: var(--surface-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+}
+
+.card__description {
+  color: white !important;
 }
 
 .card:hover .card__overlay {
@@ -352,6 +352,8 @@ p {
   background-color: var(--surface-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
 }
 
 .card__arc {
@@ -382,7 +384,7 @@ p {
 .card__title {
   font-size: 1em;
   margin: 0 0 .3em;
-  color: #6A515E;
+  color: white;
 }
 
 .card__tagline {
@@ -419,17 +421,15 @@ p {
 /* counts for visitors and registrations */
 .counts {
   width: 100%;
-  height: 700px;
-  background: url("/images/Counters.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 300px;
+  background: url(/images/map2.jpg) no-repeat center center/cover, black;
 }
 
 .counters {
   color: red;
   display: flex;
   justify-content: space-around;
-  padding-top: 400px;
+  /* padding-top: 400px; */
 }
 
 .counter-cards {
@@ -446,11 +446,16 @@ p {
 /* FAQ'S */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab&family=Spartan:wght@400;700&display=swap");
 
+.faqs {
+  background: url("/images/count2.png") center center/cover no-repeat;
+  /* height: 100Vh; */
+}
+
 .faq-container {
   margin: auto;
-  width: 60%;
-  /* background-color: black; */
-  /* color: white; */
+  padding: 45px;
+  width: 75%;
+  /* background-color: rgb(245, 147, 18); */
 }
 
 h1 {
@@ -463,7 +468,7 @@ li {
   list-style: none;
   margin-bottom: 10px;
   padding: 15px;
-  border-bottom: 2px solid #6d6b6b;
+  border-bottom: 2px solid red;
 }
 
 .question {
@@ -472,7 +477,7 @@ li {
   font-weight: 600;
   margin-bottom: 10px;
   position: relative;
-  color: #5c5a5a;
+  /* color: white; */
 }
 
 .icon-main {
@@ -488,11 +493,16 @@ li {
 .answer {
   font-size: 17px;
   font-family: "Spartan", sans-serif;
+  /* color: white; */
 }
 
 /* card css ends */
 
 @media only screen and (max-width:480px) {
+  #exodia-title h1 {
+    font-size: 75px;
+  }
+
   #footer-title {
     /* flex: 1; */
     display: flex;
@@ -506,6 +516,7 @@ li {
   }
 
   #footer-content {
+
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
@@ -558,20 +569,23 @@ li {
 
   #Aboutsection {
     padding: 1.5rem;
-    /* margin-bottom: 1.5rem; */
-
+    height: auto;
   }
 
   #para {
     padding-right: 0;
     margin-bottom: 1.5rem;
   }
-  .counters{
+  .counts{
+    height: 700px;
+  }
+  .counters {
     display: flex;
     flex-direction: column;
     padding-top: 0;
     align-items: center;
   }
+
   .counter-cards {
     display: flex;
     justify-content: center;
