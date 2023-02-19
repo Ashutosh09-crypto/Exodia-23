@@ -53,21 +53,12 @@ html {
 
 #content {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
-  /* align-self: flex-start; */
-  /* margin: 0 auto; */
-
   text-align: center;
   min-height: 70%;
-
   align-items: center;
   justify-content: center;
   color: white;
-
-
-
-
 }
 
 
@@ -78,8 +69,6 @@ html {
   font-family: 'Rye', cursive;
   background-blend-mode: lighten;
   color: black;
-  /* height: 100vh; */
-
 }
 
 #about-heading {
@@ -100,8 +89,7 @@ html {
 }
 
 #para {
-  /* background-color: #55ACEE; */
-  padding-right: 2rem;
+    padding-right: 2rem;
 }
 
 
@@ -137,7 +125,7 @@ html {
 #home-footer p {
   margin: 0;
   padding: 0;
-
+  font-family: 'Henny Penny', cursive;
 }
 
 #counterclock {
@@ -155,13 +143,8 @@ html {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-
+  font-family: 'Henny Penny', cursive;
 }
-
-
-
-
-
 
 /* styling the icons of the footer  */
 /* Style all font awesome icons */
@@ -204,45 +187,36 @@ html {
 
 h2 {
   margin-bottom: 10px;
+  font-family: 'Henny Penny', cursive;
 }
 
 p {
   margin: 0;
-  /* color: #999; */
+  font-family: 'Henny Penny', cursive;
 }
 
 #footer-content {
   background-color: black;
   padding: 20px;
   min-height: 380px;
-  /* background-image: url("/images/img6.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   background-size: cover;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-
-  /* filter: drop-shadow(132px 101px 118px black); */
-
 }
-
+.footer-title-counter h3{
+  font-family: 'Henny Penny', cursive;
+}
 
 #footer-links {
   display: flex;
   justify-content: space-between;
-  /* padding: 1rem; */
 }
 
 .footer-title-counter {
   display: inline-block;
   justify-content: space-around;
   padding: 1rem;
-  /* background-color: black; */
 }
-
-
 
 /* website footprint  */
 #counter {
@@ -273,34 +247,20 @@ p {
   font-size: 50px;
   color: black;
 }
-
-
 /* css for contact-us card */
-
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  /* gap: 2rem; */
-  /* margin: 4rem 5vw; */
   margin-bottom: 0;
   padding: 0;
   list-style-type: none;
-  /* background-color: orange; */
   display: flex;
   flex-direction: row;
   float: right;
   margin-top: 0;
   position: relative;
   flex-wrap: wrap;
-  /* padding: 2px; */
-
 }
-
-
-
-
 
 .card {
   max-width: 300px;
@@ -308,7 +268,6 @@ p {
   position: relative;
   display: block;
   margin: 5px 7px;
-  /* height: 100%;   */
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
@@ -385,6 +344,7 @@ p {
   font-size: 1em;
   margin: 0 0 .3em;
   color: white;
+  font-family: 'Henny Penny', cursive;
 }
 
 .card__tagline {
@@ -393,11 +353,13 @@ p {
   font-family: "MockFlowFont";
   font-size: .8em;
   color: #D7BDCA;
+  font-family: 'Henny Penny', cursive;
 }
 
 .card__status {
   font-size: .8em;
   color: #D7BDCA;
+  font-family: 'Henny Penny', cursive;
 }
 
 .card__description {
@@ -428,8 +390,8 @@ p {
 .counters {
   color: red;
   display: flex;
+  font-family: 'Henny Penny', cursive;
   justify-content: space-around;
-  /* padding-top: 400px; */
 }
 
 .counter-cards {
@@ -448,19 +410,17 @@ p {
 
 .faqs {
   background: url("/images/count2.png") center center/cover no-repeat;
-  /* height: 100Vh; */
 }
 
 .faq-container {
   margin: auto;
   padding: 45px;
   width: 75%;
-  /* background-color: rgb(245, 147, 18); */
 }
 
 h1 {
   text-align: center;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Henny Penny', cursive;
   font-size: 40px;
 }
 
@@ -472,12 +432,11 @@ li {
 }
 
 .question {
-  font-family: "Spartan", sans-serif;
+  font-family: 'Henny Penny', cursive;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
   position: relative;
-  /* color: white; */
 }
 
 .icon-main {
@@ -492,8 +451,7 @@ li {
 
 .answer {
   font-size: 17px;
-  font-family: "Spartan", sans-serif;
-  /* color: white; */
+  font-family: 'Henny Penny', cursive;
 }
 
 /* card css ends */
@@ -504,28 +462,22 @@ li {
   }
 
   #footer-title {
-    /* flex: 1; */
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
-    /* margin-top: 2rem; */
-
   }
 
   #footer-content {
 
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
   }
 
   .cards {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 
@@ -540,12 +492,9 @@ li {
 
   .card__header {
     display: flex;
-    /* flex-wrap: wrap; */
     padding: 10px;
     height: 109px;
     gap: 0 !important;
-    /* height: auto; */
-
   }
 
   #countdown {
@@ -592,7 +541,6 @@ li {
     align-items: center;
     width: 230px;
     height: 230px;
-    /* background: url("/images/count4.png"); */
     background-repeat: no-repeat;
     background-size: cover;
   }
