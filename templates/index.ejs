@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Exodia-23</title>
 
-    <!-- cdn for css of bootstrap -->
+    <!-- cdn for css of bootstrap and icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <!-- adding icon library  -->
@@ -27,14 +30,11 @@
             </video>
         </div>
 
-
         <!-- importing navbar from the partials -->
         <div id="navbar">
             <%- include('partials/navbar.ejs') %>
-
         </div>
         <div id="content">
-
             <div id="exodia-title">
                 <h1 style="color:red">Exodia-23</h1>
             </div>
@@ -42,11 +42,11 @@
             <!-- counter for the website  -->
             <div id="countdown-timer">
                 <div id="countdown"></div>
-
             </div>
 
 
         </div>
+
         <!-- javascript code for the counter  -->
         <script>
             // Set the date and time for the countdown
@@ -96,26 +96,9 @@
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam possimus explicabo labore repudiandae,
                     ipsa fuga. Voluptates beatae voluptatibus accusamus expedita corrupti nam harum cumque rerum id sit
-                    <<<<<<< HEAD velit corporis adipisci molestiae soluta a iusto nemo temporibus non, qui nostrum
-                        fugiat perspiciatis inventore fuga sapiente. Dolorum sapiente tempore odio hic facere
-                        repellendus obcaecati est libero excepturi, beatae nulla magnam totam esse optio repellat
-                        deserunt facilis enim officiis reprehenderit exercitationem non doloribus aut. Rerum quis quasi,
-                        labore cupiditate, quam sit esse natus laboriosam in magnam, ex eos qui praesentium fugiat vel
-                        ab excepturi consectetur officia? Hic adipisci obcaecati omnis esse cum. Possimus vitae
-                        accusamus non, velit cumque magni ratione eveniet dolor ad sunt eius praesentium quod nam libero
-                        nesciunt! Minus explicabo repellat saepe aut accusamus est illum natus odio, sequi labore iste
-                        quis? Maiores delectus, voluptatibus sunt officia eos qui at, a quasi dolore et sint tenetur
-                        officiis! Aspernatur architecto, aperiam ex cum neque quo et voluptates obcaecati natus. Nostrum
-                        tempore odit reiciendis atque laboriosam quis officiis consectetur amet quia nobis, pariatur
-                        harum non id voluptas, ex ipsa enim repudiandae aperiam odio provident aut expedita vel eos
-                        totam! Explicabo incidunt earum reiciendis magnam qui assumenda sint odio autem beatae labore,
-                        obcaecati provident. </p>
-                        =======
-                        velit corporis adipisci molestiae soluta a iusto nemo temporibus non, qui nostrum fugiat
-                        perspiciatis
-                        inventore fuga sapiente. Dolorum sapiente tempb
+                    velit corporis adipisci molestiae soluta a iusto nemo temporibus non, qui nostrum fugiat
+                    perspiciatis
                 </p>
-                >>>>>>> f26b99571d658822813b1cab0cf42923616c35fd
             </div>
             <div id="yt-video">
                 <iframe id="video-link" src="https://www.youtube.com/embed/66xHwne0EpU" title="YouTube video player"
@@ -126,19 +109,59 @@
         </div>
 
     </section>
-    <!-- vide of the exodia  -->
-    <!-- <section id="trailersection">
-        <div id="trailer-heading">
-            <h2>
-                Exodia trailer
-            </h2>
+    <section class="counts">
+        <div class="counters">
+            <div class="counter-cards">
+                <h3>Registrations<br><span id="Registrations">30+</span></h3>
+            </div>
+            <div class="counter-cards">
+                <h3>Website Visitors<br><span id="count">0</span></h3>
+            </div>
+            <div class="counter-cards">
+                <h3>Events<br><span id="Registrations">35+</span></h3>
+            </div>
         </div>
-        <div id="ytlink">
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/WU_8wcNML3M" title="IIT MANDI OFFICIAL AFTERMOVIE EXODIA 2018" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    
+    </section>
+    <section class="faqs">
+        <div class="faq-container">
+            <h1 style="color: red;">Frequently Asked Questions</h1>
+            <ul>
+                <li class="faq">
+                    <div class="question">
+                        Which is the accomadition fee for participants?
+                        <span class="icon-main">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+                    <div class="answer non-active">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quas repellendus? Quae recusandae doloremque tempore eveniet explicabo quam, atque nemo quos dolor corporis, necessitatibus tenetur excepturi voluptatibus blanditiis amet? Ipsum.
+                    </div>
+                </li>
+                <li class="faq">
+                    <div class="question">
+                        What i should take participate in exodia?
+                        <span class="icon-main">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+                    <p class="answer non-active">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, repellendus iure neque quod praesentium delectus, voluptates exercitationem cum, molestias id adipisci voluptas tempora laboriosam est quaerat nihil perspiciatis porro facilis aut quam distinctio vitae placeat? Quam ex dolores corporis laboriosam, ratione consectetur assumenda dicta vero atque. 
+                    </p>
+                </li>
+                <li class="faq">
+                    <div class="question">
+                        Who is cheif guest for exodia?
+                        <span class="icon-main">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+                    <p class="answer non-active">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eum omnis hic consectetur quod ducimus minus dolores expedita nulla. Veniam dolorum ad deleniti suscipit, inventore laudantium minus natus laborum aliquam, asperiores ea sed eaque nulla provident quam! Blanditiis, fugit rem enim eius accusantium aperiam nemo aliquam debitis cumque dolore quae. Omnis, vero iure doloribus officiis magni dolorum qui? Soluta error mollitia incidunt perspiciatis velit cupiditate facilis eaque porro officia praesentium dignissimos nostrum, aspernatur ex a laboriosam pariatur sunt, deserunt laudantium. Placeat, et quas mollitia possimus officiis velit asperiores ipsa! Maiores, temporibus. Magni dolores, modi laborum eaque cupiditate hic adipisci?
+                    </p>
 
-    </section> -->
+                </li>
+            </ul>
+        </div>
+    </section>
     <section id="footer-content">
         <!-- profile cards -->
         <div id="container">
@@ -157,18 +180,12 @@
                         </div>
 
                         <!-- website footprint  -->
-                        <div id="counter">
-                            <p style="color:red">Number of visitors:</p>
-                            <span id="count">0</span>
-                        </div>
-
-
                     </div>
                     <div class="col cards">
                         <ul class="cards">
                             <li>
                                 <a href="" class="card">
-                                    <img src="/images/img2.jpg" class="card__image" alt="" />
+                                    <img src="/images/pirateship.jpg" class="card__image" alt="" />
                                     <div class="card__overlay">
                                         <div class="card__header">
                                             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +212,7 @@
                                             </svg>
                                             <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
                                             <div class="card__header-text">
-                                                <h3 class="card__title">here is the Email id</h3>
+                                                <h3 class="card__title">Mail@iitmandi.ac.in</h3>
                                             </div>
                                         </div>
                                         <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -213,8 +230,7 @@
                                             </svg>
                                             <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
                                             <div class="card__header-text">
-                                                <h3 class="card__title">Important Email-IDS here is the id</h3>
-
+                                                <h3 class="card__title">Mail@iitmandi.ac.in</h3>
                                             </div>
                                         </div>
                                         <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -223,25 +239,15 @@
                                 </a>
                             </li>
                         </ul>
-
                     </div>
                 </div>
-
             </div>
     </section>
-
-
     <footer id="home-footer">
         <p>
             © Copyright <b>Exodia | IIT Mandi </b>.All Rights Reserved
         </p>
     </footer>
-
-
-
-
-
-
     <!-- CDN for js of bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
@@ -278,6 +284,23 @@
         count++;
         localStorage.setItem("count", count);
         counter.innerHTML = count
+    </script>
+    <!-- Javascript for FAQ'S -->
+    <script>
+        const faqs = document.querySelectorAll(".faq");
+        for (const item of faqs) {
+            const curr_faq = item.childNodes;
+            const question = curr_faq[1];
+            const answer = curr_faq[3];
+            const icon = question.querySelector(".icon-main");
+            icon.addEventListener("click", function () {
+                answer.classList.toggle("non-active");
+                const i = icon.querySelector("i");
+                i.classList.toggle("fa-xmark");
+                i.classList.toggle("fa-plus");
+                console.log(i);
+            });
+        }
     </script>
 
 </body>
