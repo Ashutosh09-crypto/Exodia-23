@@ -1,0 +1,44 @@
+#Aboutsection {
+    padding: 5rem;
+    background: url(/images/map2.jpg) no-repeat center center/cover, black;
+    background-blend-mode: lighten;
+    color: black;
+    height: 100vh;
+  
+  }
+  
+  #about-heading {
+    margin-bottom: 2.5rem;
+    border-left: 10px solid red;
+    padding-left: 2rem;
+  }
+  
+  #Aboutsection p {
+    text-align: justify;
+    color: black !important;
+  }
+  
+  #Aboutsection-content {
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  #para {
+    /* background-color: #55ACEE; */
+    padding-right: 2rem;
+  }
+  
+  
+  #video-link {
+    /* margin-left: 4rem; */
+    transition: transform 0.5s ease-in-out;
+    border-radius: 5px;
+    width: 500px;
+    height: 315px;
+  }
+  
+  #video-link:hover {
+    transform: scale(1.08);
+    border: 2px solid white;
+  }

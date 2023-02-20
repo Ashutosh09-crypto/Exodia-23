@@ -3,6 +3,9 @@
   --curve: 40;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Rye&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,28 +13,25 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 #homesection {
-  /* Image Location */
-  /* background-video: url("/images/img10.jpg"); */
   height: 100vh;
-
-
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: cover;
-  /* background-color: #464646; */
-  /* Font Colour */
   color: white;
 
 }
 
 #exodia-title h1 {
   color: rgb(254, 38, 38) !important;
-  font-size: 60px;
-  font-family: bonn;
+  font-size: 100px;
+  font-family: 'Henny Penny', cursive;
 }
 
 #video-bg {
@@ -45,32 +45,20 @@
 }
 
 #video-bg video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-
 }
 
 #content {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
-  /* align-self: flex-start; */
-  /* margin: 0 auto; */
-
   text-align: center;
   min-height: 70%;
-
   align-items: center;
   justify-content: center;
   color: white;
-
-
-
-
 }
 
 
@@ -78,15 +66,9 @@
   background-color: antiquewhite;
   padding: 5rem;
   background: url(/images/map2.jpg) no-repeat center center/cover, black;
-  /* background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover; */
-  /* background-color: #464646; */
-  /* Font Colour */
+  font-family: 'Rye', cursive;
   background-blend-mode: lighten;
   color: black;
-
 }
 
 #about-heading {
@@ -107,8 +89,7 @@
 }
 
 #para {
-  /* background-color: #55ACEE; */
-  padding-right: 2rem;
+    padding-right: 2rem;
 }
 
 
@@ -144,7 +125,7 @@
 #home-footer p {
   margin: 0;
   padding: 0;
-
+  font-family: 'Henny Penny', cursive;
 }
 
 #counterclock {
@@ -162,13 +143,8 @@
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-
+  font-family: 'Henny Penny', cursive;
 }
-
-
-
-
-
 
 /* styling the icons of the footer  */
 /* Style all font awesome icons */
@@ -180,6 +156,7 @@
   text-decoration: none;
   border-radius: 50%;
   padding: 15px 15px;
+  margin: 5px;
 }
 
 /* Add a hover effect if you want */
@@ -210,45 +187,36 @@
 
 h2 {
   margin-bottom: 10px;
+  font-family: 'Henny Penny', cursive;
 }
 
 p {
   margin: 0;
-  /* color: #999; */
+  font-family: 'Henny Penny', cursive;
 }
 
 #footer-content {
   background-color: black;
   padding: 20px;
   min-height: 380px;
-  /* background-image: url("/images/img6.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   background-size: cover;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-
-  /* filter: drop-shadow(132px 101px 118px black); */
-
 }
-
+.footer-title-counter h3{
+  font-family: 'Henny Penny', cursive;
+}
 
 #footer-links {
   display: flex;
   justify-content: space-between;
-  /* padding: 1rem; */
 }
 
 .footer-title-counter {
   display: inline-block;
   justify-content: space-around;
   padding: 1rem;
-  /* background-color: black; */
 }
-
-
 
 /* website footprint  */
 #counter {
@@ -279,34 +247,20 @@ p {
   font-size: 50px;
   color: black;
 }
-
-
 /* css for contact-us card */
-
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  /* gap: 2rem; */
-  /* margin: 4rem 5vw; */
   margin-bottom: 0;
   padding: 0;
   list-style-type: none;
-  /* background-color: orange; */
   display: flex;
   flex-direction: row;
   float: right;
   margin-top: 0;
   position: relative;
   flex-wrap: wrap;
-  /* padding: 2px; */
-
 }
-
-
-
-
 
 .card {
   max-width: 300px;
@@ -314,11 +268,10 @@ p {
   position: relative;
   display: block;
   margin: 5px 7px;
-
-  /* height: 100%;   */
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
+
 }
 
 .card__image {
@@ -336,6 +289,12 @@ p {
   background-color: var(--surface-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+}
+
+.card__description {
+  color: white !important;
 }
 
 .card:hover .card__overlay {
@@ -352,6 +311,8 @@ p {
   background-color: var(--surface-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
 }
 
 .card__arc {
@@ -382,7 +343,8 @@ p {
 .card__title {
   font-size: 1em;
   margin: 0 0 .3em;
-  color: #6A515E;
+  color: white;
+  font-family: 'Henny Penny', cursive;
 }
 
 .card__tagline {
@@ -391,11 +353,13 @@ p {
   font-family: "MockFlowFont";
   font-size: .8em;
   color: #D7BDCA;
+  font-family: 'Henny Penny', cursive;
 }
 
 .card__status {
   font-size: .8em;
   color: #D7BDCA;
+  font-family: 'Henny Penny', cursive;
 }
 
 .card__description {
@@ -419,17 +383,15 @@ p {
 /* counts for visitors and registrations */
 .counts {
   width: 100%;
-  height: 700px;
-  background: url("/images/Counters.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 300px;
+  background: url(/images/map2.jpg) no-repeat center center/cover, black;
 }
 
 .counters {
   color: red;
   display: flex;
+  font-family: 'Henny Penny', cursive;
   justify-content: space-around;
-  padding-top: 400px;
 }
 
 .counter-cards {
@@ -446,16 +408,19 @@ p {
 /* FAQ'S */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab&family=Spartan:wght@400;700&display=swap");
 
+.faqs {
+  background: url("/images/count2.png") center center/cover no-repeat;
+}
+
 .faq-container {
   margin: auto;
-  width: 60%;
-  /* background-color: black; */
-  /* color: white; */
+  padding: 45px;
+  width: 75%;
 }
 
 h1 {
   text-align: center;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Henny Penny', cursive;
   font-size: 40px;
 }
 
@@ -463,16 +428,15 @@ li {
   list-style: none;
   margin-bottom: 10px;
   padding: 15px;
-  border-bottom: 2px solid #6d6b6b;
+  border-bottom: 2px solid red;
 }
 
 .question {
-  font-family: "Spartan", sans-serif;
+  font-family: 'Henny Penny', cursive;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
   position: relative;
-  color: #5c5a5a;
 }
 
 .icon-main {
@@ -487,34 +451,33 @@ li {
 
 .answer {
   font-size: 17px;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Henny Penny', cursive;
 }
 
 /* card css ends */
 
 @media only screen and (max-width:480px) {
+  #exodia-title h1 {
+    font-size: 75px;
+  }
+
   #footer-title {
-    /* flex: 1; */
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
-    /* margin-top: 2rem; */
-
   }
 
   #footer-content {
+
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
   }
 
   .cards {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 
@@ -529,12 +492,9 @@ li {
 
   .card__header {
     display: flex;
-    /* flex-wrap: wrap; */
     padding: 10px;
     height: 109px;
     gap: 0 !important;
-    /* height: auto; */
-
   }
 
   #countdown {
@@ -558,27 +518,29 @@ li {
 
   #Aboutsection {
     padding: 1.5rem;
-    /* margin-bottom: 1.5rem; */
-
+    height: auto;
   }
 
   #para {
     padding-right: 0;
     margin-bottom: 1.5rem;
   }
-  .counters{
+  .counts{
+    height: 700px;
+  }
+  .counters {
     display: flex;
     flex-direction: column;
     padding-top: 0;
     align-items: center;
   }
+
   .counter-cards {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 230px;
     height: 230px;
-    /* background: url("/images/count4.png"); */
     background-repeat: no-repeat;
     background-size: cover;
   }
