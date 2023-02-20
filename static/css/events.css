@@ -1,291 +1,262 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-/* #video-bg {
-    position: fixed;
+/* Slider wrapper*/
+.css-slider-wrapper {
+    display: block;
+    background: #FFF;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
     top: 0;
-    left: 0;
+    bottom: 0;
+}
+
+/* Slider */
+.slider {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    z-index: -100;
-  }
-  
-  #video-bg video {
+    /* background: red; */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50% );
-    min-width: 100%;
-    min-height: 100%;
-    
-  }
+    left: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 0;
 
-  body{
-    /* display: flex; */
-/* justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
-
-  } */
-#h1 {
-    position: relative;
-    font-size: 2em;
-    color: rgb(15, 15, 35);
-}
-
-#h1::before {
-    content: attr(data-text);
-    position: absolute;
-    color: #00BFFF;
-    width: 350px;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid #fff;
-    animation: animate 5s linear infinite;
-    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
-
-}
-
-@keyframes animate {
-
-    0%,
-    10%,
-    100% {
-        width: 0;
-    }
-
-    70%,
-    90% {
-        width: 200px;
-
-    }
-}
-
-.h1 {
-    height: 200px;
-}
-
-
-/* default stylings */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* provides background color to body */
-body {
-    background-color: rgb(255, 235, 235);
-}
-
-/* ----- container stylings: 
-        -> centers the whole content of the page
-        -> defines width and height for container ----- */
-.container {
     display: flex;
-    flex-direction: column;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 800px;
-    height: 600px;
+    align-content: center;
+
+    -webkit-transition: -webkit-transform 1600ms;
+    transition: -webkit-transform 1600ms, transform 1600ms;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
-/* ----- end of container stylings ----- */
-
-/* provides padding to main heading */
-.main-heading {
-    padding: 2rem 0 2rem 0;
-}
-
-.content {
-    position: relative;
-}
-
-/* ----- carousel content stylings ----- */
-/* places the carousel content on center of the carousel */
-.carousel-content {
-    position: absolute;
-    /*to center the content horizontally and vertically*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 50;
-}
-
-.carousel-heading {
-    font-size: 3rem;
-    color: #308d46;
-    margin-bottom: 1rem;
-}
-
-/*----- end of carousel content stylings ----- */
-
-/* ----- slideshow stylings ----- */
-.slideshow {
-    height: 100%;
-    /* overflow: hidden; */
-    /* to hide slides in x-direction */
-    position: relative;
-}
-
-/* wrapper which wraps all the slideshow images stylings */
-.slideshow-wrapper {
-    display: flex;
-    /* We give it width as 400% because we are making a 
-               4 image carousel. If you want to make for example, 
-               5 images carousel, then give width as 500%. */
-    width: 250%;
-    height: 150%;
-    position: relative;
-    /* you can change the animation settings from below */
-    animation: slideshow 20s infinite;
-}
-
-/* define width and height for images*/
-.slide {
-    width: 100%;
-    height: 100%;
-}
-
-.slide-img {
-    width: 80%;
-    height: 60%;
-    object-fit: scale-down;
-    /* object-fit: cover; */
-    background-position: center;
-}
-
-/* @keyframes are used to provide animations
-           We make these settings for 4 image carousel.
-           Make modification according to your needs. */
-@keyframes slideshow {
-    0% {
-        left: 0;
-    }
-
-    10% {
-        left: 0;
-    }
-
-    15% {
-        left: -100%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    30% {
-        left: -200%;
-    }
-
-    40% {
-        left: -200%;
-    }
-
-    45% {
-        left: -300%;
-    }
-
-    55% {
-        left: -300%;
-    }
-
-    60% {
-        left: -200%;
-    }
-
-    70% {
-        left: -200%;
-    }
-
-    75% {
-        left: -100%;
-    }
-
-    85% {
-        left: -100%;
-    }
-
-    90% {
-        left: 0%;
-    }
-}
-
-/* ----- end of slideshow stylings ----- */
-
-/* ----- carousel control buttons stylings ----- */
-.slide-btn {
-    background-color: #bbb;
-    border-radius: 50%;
-    border: .2rem solid #d38800;
-    width: 1.2rem;
-    height: 1.2rem;
-    outline: none;
-    cursor: pointer;
-    /* stylings for positioning the buttons at
-               the bottom of the carousel */
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 70;
-}
-
-/* As we provide position as absolute, 
-        the buttons places one over the other. 
-        So, we have to place them individually
-        at their correct positions. */
-.slide-btn-1 {
-    left: 45%;
-}
-
-.slide-btn-2 {
-    left: 50%;
-}
-
-.slide-btn-3 {
-    left: 55%;
-}
-
-.slide-btn-4 {
-    left: 60%;
-}
-
-/* When we focus on the particular button, 
-        the animation stops to that particular image 
-        to which the button is associated. */
-.slide-btn-1:focus~.slideshow-wrapper {
-    animation: none;
+/* each slide background color */
+.slide1 {
+     background: url("/images/E1.jpg") center center/cover no-repeat; 
+     background-repeat: no-repeat;
+    background-size: auto; 
     left: 0;
 }
 
-.slide-btn-2:focus~.slideshow-wrapper {
-    animation: none;
-    left: -100%;
+.slide2 {
+    background: url("/images/E2.jpg") center center/cover no-repeat;
+    /* background-repeat: no-repeat;
+    background-size: auto; */
+    left: 100%
 }
 
-.slide-btn-3:focus~.slideshow-wrapper {
-    animation: none;
-    left: -200%;
+.slide3 {
+    background: url("/images/E3.jpg") center center/cover no-repeat;
+    /* background-repeat: no-repeat;
+    background-size: auto; */
+    left: 200%
 }
 
-.slide-btn-4:focus~.slideshow-wrapper {
-    animation: none;
-    left: -300%;
+.slide4 {
+    background: url("/images/E4.jpg") center center/cover no-repeat;
+    /* background-repeat: no-repeat;
+    background-size: auto; */
+    left: 300%;
 }
 
-/* when we focus on the button, the background color changes */
-.slide-btn:focus {
-    background-color: #308d46;
+.slider>div {
+    text-align: center;
 }
 
-/* ----- end of carousel control buttons stylings ----- */
+/* Slider inner content */
+.slider h2 {
+    color: #FFF;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 120%;
+    opacity: 0;
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+}
+
+.slider .button {
+    color: #FFF;
+    padding: 5px 50px;
+    background: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    opacity: 0;
+    font-size: 15px;
+    line-height: 30px;
+    display: inline-block;
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+}
+
+.slider h2,
+.slider .button {
+    -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+    transition: transform 800ms, opacity 800ms;
+    -webkit-transition-delay: 1s;
+    /* Safari */
+    transition-delay: 1s;
+}
+
+/* Next and previous button */
+.control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    z-index: 55;
+}
+
+.control label {
+    z-index: 0;
+    display: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    color: #FFF;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.control label:hover {
+    opacity: 0.5;
+}
+
+.next {
+    right: 1%;
+}
+
+.previous {
+    left: 1%;
+}
+
+/* Slider pagination */
+.slider-pagination {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.slider-pagination label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 2px;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+/* Slider control active css */
+.slide-radio1:checked~.next .numb2,
+.slide-radio2:checked~.next .numb3,
+.slide-radio3:checked~.next .numb4,
+.slide-radio2:checked~.previous .numb1,
+.slide-radio3:checked~.previous .numb2,
+.slide-radio4:checked~.previous .numb3 {
+    display: block;
+    z-index: 1000;
+}
+
+/* Slider pagination active css */
+.slide-radio1:checked~.slider-pagination .page1,
+.slide-radio2:checked~.slider-pagination .page2,
+.slide-radio3:checked~.slider-pagination .page3,
+.slide-radio4:checked~.slider-pagination .page4 {
+    background: rgba(255, 255, 255, 1)
+}
+
+/* css for sliding  effect when you click on control button*/
+.slide-radio1:checked~.slider {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.slide-radio2:checked~.slider {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.slide-radio3:checked~.slider {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+}
+
+.slide-radio4:checked~.slider {
+    -webkit-transform: translateX(-300%);
+    transform: translateX(-300%);
+}
+
+.slide-radio1:checked~.slide1 h2,
+.slide-radio2:checked~.slide2 h2,
+.slide-radio3:checked~.slide3 h2,
+.slide-radio4:checked~.slide4 h2,
+.slide-radio1:checked~.slide1 .button,
+.slide-radio2:checked~.slide2 .button,
+.slide-radio3:checked~.slide3 .button,
+.slide-radio4:checked~.slide4 .button {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1
+}
+
+@media only screen and (max-width: 767px) {
+    .slider h2 {
+        font-size: 20px;
+    }
+
+    .slider>div {
+        padding: 0 2%
+    }
+
+    .control label {
+        font-size: 35px;
+    }
+
+    .slider .button {
+        padding: 0 30px;
+    }
+}
+
+/* left-right-controls image  */
+
+.right-left{
+    width: 64px;
+    height: 71px;
+  
+}
+
+/* adding the navbar by increasing the z-index of it  */
+
+
+.bg-body-tertiary{
+    z-index: 5000;
+    
+}
+
+/* cloud animation gif  */
+#pokemon{
+    display: none;
+    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    z-index: 4500000;
+  }
+  #pokemon{
+    float: right;
+  
+  }
+
+
