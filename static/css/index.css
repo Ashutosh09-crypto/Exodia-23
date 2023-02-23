@@ -5,6 +5,11 @@
   src: url("/fonts/Windlass.ttf");
 }
 
+@font-face {
+  font-family: "BattleBridge";
+  src: url("/fonts/BattleBridge.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -234,6 +239,19 @@ section img#mountains_front {
   background-attachment: fixed;
   z-index: -1;
 }
+
+
+/* footer::before {
+  content: "";
+  background: url("https://athwsue2-prd-webscript-cdn-endpoint.azureedge.net/bfc9dd254a08162f671b75adc95a571b/assets/compass-footer/bottom-curve.svg") no-repeat center center/cover;
+  position: relative;
+  z-index: 10000;
+  top: -10px;
+  height: 22px;
+  width: 100%;
+  display: block;
+} */
+
 
 body {
   min-height: 80vh;
