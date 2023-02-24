@@ -3,11 +3,11 @@
   display: none;
 }
 
-.container {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
+@font-face {
+  font-family: "Windlass";
+  src: url("/fonts/Windlass.ttf");
 }
+
 
 body::after {
   background: url("https://athwsue2-prd-webscript-cdn-endpoint.azureedge.net/bfc9dd254a08162f671b75adc95a571b/assets/global-header/background-sub-layer.svg") repeat-x 50% 100%/1200px 144px;
@@ -21,13 +21,18 @@ body::after {
 
 }
 
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
 .navbar {
   position: absolute;
   width: 100%;
   /* background-color: linear-gradient(red 10%, 30%, blue 90%); */
 
-  background-color: #304a50;
-  color: #000;
+  color: #ffffff;
   opacity: 0.85;
   z-index: 100;
 }
@@ -57,7 +62,7 @@ body::after {
 }
 
 .navbar a {
-  color: #000000;
+  color: #ffffff;
   font-family: "Windlass";
   text-decoration: none;
   font-weight: 500;
@@ -65,7 +70,7 @@ body::after {
 }
 
 .navbar a:hover {
-  color: #000000;
+  color: #bdaeae;
 }
 
 @media (max-width: 768px) {

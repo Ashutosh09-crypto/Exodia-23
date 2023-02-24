@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "BattleBridge";
+    src: url("/fonts/BattlesBridge.ttf");
+}
+
+body {
+    overflow: hidden;
+}
+
 /* Slider wrapper*/
 .css-slider-wrapper {
     display: block;
@@ -38,30 +47,39 @@
     transform: scale(1);
 }
 
+.slider::after {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}
+
 /* each slide background color */
+
+
+
 .slide1 {
-    background: url("/images/E1.jpg") center center/cover no-repeat;
+    background: url("https://images.alphacoders.com/902/902096.jpg") center center/cover no-repeat;
     background-repeat: no-repeat;
     background-size: auto;
     left: 0;
 }
 
 .slide2 {
-    background: url("/images/E2.jpg") center center/cover no-repeat;
+    background: url("https://compass-ssl.xboxlive.com/assets/1f/35/1f355aca-753c-4213-8a42-563128129070.jpg?n=Parallax_Sections_Large_Desktop_01.jpg") center center/cover no-repeat;
     /* background-repeat: no-repeat;
     background-size: auto; */
     left: 100%
 }
 
 .slide3 {
-    background: url("/images/E3.jpg") center center/cover no-repeat;
+    background: url("https://assets.vg247.com/current//2021/03/sea_of_thieves.jpg") center center/cover no-repeat;
     /* background-repeat: no-repeat;
     background-size: auto; */
     left: 200%
 }
 
 .slide4 {
-    background: url("/images/E4.jpg") center center/cover no-repeat;
+    background: url("https://gameranx.com/wp-content/uploads/2022/02/sea-of-thieves.jpg") center center/cover no-repeat;
     /* background-repeat: no-repeat;
     background-size: auto; */
     left: 300%;
@@ -119,8 +137,8 @@
     z-index: 0;
     display: none;
     text-align: center;
-    line-height: 50px;
-    font-size: 50px;
+    line-height: 30px;
+    font-size: 30px;
     color: #FFF;
     cursor: pointer;
     opacity: 0.5;
@@ -132,10 +150,15 @@
 
 .next {
     right: 1%;
+    z-index: 1;
 }
 
 .previous {
     left: 1%;
+}
+
+a {
+    cursor: pointer;
 }
 
 /* Slider pagination */
@@ -149,8 +172,8 @@
 }
 
 .slider-pagination label {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
@@ -250,12 +273,452 @@
 #pokemon {
     display: none;
     /* background-color: black; */
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 4500000;
 }
 
-#pokemon {
-    float: right;
 
+
+@-webkit-keyframes bounceLeft {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    40% {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+
+    60% {
+        -webkit-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+}
+
+@-moz-keyframes bounceLeft {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(30px);
+    }
+
+    60% {
+        transform: translateX(15px);
+    }
+}
+
+@keyframes bounceLeft {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    40% {
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+
+    60% {
+        -ms-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+}
+
+/* /left bounce */
+
+
+/* right bounce */
+@-webkit-keyframes bounceRight {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    40% {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateX(-15px);
+        transform: translateX(-15px);
+    }
+}
+
+@-moz-keyframes bounceRight {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(-30px);
+    }
+
+    60% {
+        transform: translateX(-15px);
+    }
+}
+
+@keyframes bounceRight {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    40% {
+        -ms-transform: translateX(-30px);
+        transform: translateX(-30px);
+    }
+
+    60% {
+        -ms-transform: translateX(-15px);
+        transform: translateX(-15px);
+    }
+}
+
+/* /right bounce */
+
+
+/* assign bounce */
+
+.float-right {
+    animation: bounceRight 2s infinite !important;
+}
+
+.float-left {
+    -webkit-animation: bounceLeft 2s infinite;
+    animation: bounceLeft 2s infinite;
+}
+
+.arrow-right {
+    -webkit-animation: bounceRight 2s infinite;
+    animation: bounceRight 2s infinite;
+
+}
+
+.arrow-right svg {
+    transform: rotateY(180deg);
+}
+
+.arrow-left {
+    -webkit-animation: bounceLeft 2s infinite;
+    animation: bounceLeft 2s infinite;
+}
+
+
+/* particular event panel */
+.control {
+    z-index: 1;
+    width: 3%;
+    height: 3%;
+}
+
+.event-wrapper {
+    margin-bottom: 3%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-img {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.event-wrapper h2 {
+    font-family: "Windlass";
+}
+
+.heading-wrapper {
+    margin-bottom: 6%;
+}
+
+.upper-heading,
+.lower-heading {
+    margin: 0px 10px;
+    width: 100%;
+    height: 5px;
+    background: url("/images/simple-hr-white-rock.c059e6a1.svg");
+}
+
+
+.slider::after {
+    content: "";
+    height: 10%;
+    width: 100%;
+    z-index: 1000000;
+    background: url("https://athwsue2-prd-webscript-cdn-endpoint.azureedge.net/0e5834a0939b58f5cce82978ef6ad5ee/assets/compass-footer/dt_footer_top-wrap.svg") no-repeat center center/cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 16%;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    z-index: 100000;
+    height: 24%;
+    top: 0;
+    background-color: #162e34f5;
+    border-bottom-left-radius: 32%;
+    border-bottom-right-radius: 32%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .slider::after {
+        height: 8%;
+    }
+
+    .slider::before {
+        height: 22.5%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .slider::after {
+        height: 7%;
+    }
+
+    .slider::before {
+        height: 22%;
+        border-bottom-left-radius: 27%;
+        border-bottom-right-radius: 27%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider::after {
+        height: 5%;
+    }
+
+    .slider::before {
+        height: 20%;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+    }
+}
+
+
+#bottom-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #010d0b;
+    width: 100%;
+    height: 70px;
+}
+
+#bottom-footer::before {
+    content: "";
+    position: relative;
+    bottom: 40px;
+    background: url("https://athwsue2-prd-webscript-cdn-endpoint.azureedge.net/8eb442907ff8d4d67a06418bfee0e94c/assets/compass-footer/bottom-curve.svg") no-repeat center center/cover;
+    width: 100%;
+    height: 60%;
+    display: block;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+h5 {
+    font-family: "BattleBridge", "Windlass";
+}
+
+
+.map-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.918);
+    /* opacity: 0.3; */
+    margin: auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+
+    transition: all 1s ease;
+}
+
+.map {
+    /* background: url("/images/navigation-map.png") no-repeat center center/contain; */
+    /* background-size: 100% 100%; */
+    height: 600px;
+    width: 900px;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 10%;
+}
+
+.map-img {
+    height: 600px;
+    width: 900px;
+    position: absolute;
+}
+
+.map-mark {
+    height: 1%;
+    width: 1%;
+    /* background: url("/images/marker.png") no-repeat center center/cover; */
+
+
+}
+
+i {
+    font-size: 100%;
+    transition: all 0.5s ease-in;
+}
+
+i:hover {
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+
+.small-description {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1%;
+    height: auto;
+    width: 20%;
+    top: 0px;
+    right: 0px;
+    font-size: 17px;
+    color: black;
+    font-family: "Windlass";
+    background-color: rgb(204, 187, 187);
+    clip-path: url("#article-panel");
+    transition: visibility 0.5s,
+        opacity 0.5s linear;
+    /* background-color: white; */
+    z-index: 10000;
+}
+
+.visible-class {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.map div {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .map-img,
+    .map {
+        height: 400px;
+        width: 600px;
+    }
+
+    .small-description {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .map-img,
+    .map {
+        height: 350px;
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .map-img,
+    .map {
+        height: 350px;
+        width: 400px;
+    }
+
+    .small-description {
+        font-size: 12px;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .map-img,
+    .map {
+        height: 300px;
+        width: 350px;
+    }
+
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .map-img,
+    .map {
+        height: 250px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .map-img,
+    .map {
+        height: 200px;
+        width: 250px;
+    }
 }

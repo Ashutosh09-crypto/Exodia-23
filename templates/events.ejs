@@ -7,6 +7,7 @@
     <title>Exodia | Events</title>
 
     <!-- cdn for css of bootstrap -->
+    <link rel="stylesheet" href="/css/navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/events.css">
@@ -16,108 +17,231 @@
 <body>
 
     <!-- importing navbar from the partials -->
-    <%- include('partials/navbar.ejs') %>
-        <img src="http://static.tumblr.com/46cb5b1d63cf84148220815beac16919/sqjwi15/uQCn06vx6/tumblr_static_tumblr_mmff7iuxxv1qhd8sao1_500.gif"
-            class="hidden" id="pokemon">
 
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="/#about-us">About</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="/#contact-us">Contact</a></li>
+                <li><a id="map-btn">Map</a></li>
+            </ul>
+            <h1 class="logo">Events</h1>
+        </div>
+    </nav>
+
+    <!-- importing all the clipaths -->
+    <%- include('partials/clip_path_svgs.ejs') %>
+
+        <img src="https://i.pinimg.com/originals/d6/d1/e0/d6d1e0bbdd2eda8f44a2125154670e82.gif" class="hidden"
+            id="pokemon">
+
+
+
+        <div class="map-wrapper">
+            <div class="small-description">
+
+                <br>
+                Island (Club) : UDC
+                <br>
+                Treasure (Event) : SIUUUU
+            </div>
+
+            <div class="map">
+                <img src="/images/navigation-map.png" class='map-img'>
+
+
+
+                <div class="grid-box">
+                    <div class="grid-list">
+                        <span id="3" class="map-mark"><i class="fa fa-close" style="color:red"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+                </div>
+
+                <div class="grid-box">
+
+                    <div class="grid-list">
+
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+
+
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <div class="grid-list">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
 
         <!-- image crousel  -->
 
 
         <div class="css-slider-wrapper">
-            <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
-            <input type="radio" name="slider" class="slide-radio2" id="slider_2">
-            <input type="radio" name="slider" class="slide-radio3" id="slider_3">
-            <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+            <input type="radio" name="slider" class="gif slide-radio1" checked id="slider_1">
+            <input type="radio" name="slider" class="gif slide-radio2" id="slider_2">
+            <input type="radio" name="slider" class="gif slide-radio3" id="slider_3">
+            <input type="radio" name="slider" class="gif slide-radio4" id="slider_4">
 
 
-            <div class="slider-pagination">
+            <!-- <div class="slider-pagination">
 
-                <label for="slider_1" class="page1"></label>
-                <label for="slider_2" class="page2"></label>
-                <label for="slider_3" class="page3"></label>
-                <label for="slider_4" class="page4"></label>
-            </div>
+                    <label for="slider_1" class="page1"></label>
+                    <label for="slider_2" class="page2"></label>
+                    <label for="slider_3" class="page3"></label>
+                    <label for="slider_4" class="page4"></label>
+                </div> -->
 
             <div class="next control">
-                <label for="slider_1" class="numb1"><img class="right-left right" src="/images/piratenext.png"></label>
-                <label for="slider_2" class="numb2"><img class="right-left right" src="/images/piratenext.png"></label>
-                <label for="slider_3" class="numb3"><img class="right-left right" src="/images/piratenext.png"></label>
-                <label for="slider_4" class="numb4"><img class="right-left right" src="/images/piratenext.png"></label>
+                <label for="slider_1" class="gif numb1 float-left"><i class="arrow-left"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
+                <label for="slider_2" class="gif numb2 float-left"><i class="arrow-left"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
+                <label for="slider_3" class="gif numb3 float-left"><i class="arrow-left"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
+                <label for="slider_4" class="gif numb4 float-left"><i class="arrow-left"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
             </div>
             <div class="previous control">
-                <label for="slider_1" class="numb1"><img class="right-left" src="/images/piratenext.png"></label>
-                <label for="slider_2" class="numb2"><img class="right-left" src="/images/piratenext.png"></label>
-                <label for="slider_3" class="numb3"><img class="right-left" src="/images/piratenext.png"></label>
-                <label for="slider_4" class="numb4"><img class="right-left" src="/images/piratenext.png"></label>
+                <label for="slider_1" class="gif numb1 float-right"><i class="arrow-right"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
+                <label for="slider_2" class="gif numb2 float-right"><i class="arrow-right"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
+                <label for="slider_3" class="gif numb3 float-right"><i class="arrow-right"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
+                <label for="slider_4" class="gif numb4 float-right"><i class="arrow-right"><%-
+                            include("partials/arrow_svg.ejs")%></i></label>
             </div>
 
 
+            <!-- modular code starts -->
             <div class="slider slide1">
-                <!-- <button id="summonPokemon">Change pokemon!</div> -->
+
+                <div class="event-wrapper">
+                    <div class="inner-page">
+
+                        <div class="heading-wrapper">
+                            <div class="upper-heading"></div>
+                            <h2>Valorant</h2>
+                            <div class="lower-heading"></div>
+                        </div>
+
+                        <div class="content-wrapper">
 
 
-                <div>
-                    <h2>Css Based slider</h2>
-                    <a href="#" class="button">Download</a>
+
+                            <h5>RuleBook: </h5>
+
+                            <h5>Registration Fees: </h5>
+
+                            <p>About Event : Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                facilis</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
+
+            <!-- modular code starts -->
+
+
             <div class="slider slide2">
                 <div>
-                    <h2>CSS Slider without use of any javascript or jQuery</h2>
-                    <a href="#" class="button">Download</a>
+
                 </div>
             </div>
             <div class="slider slide3">
                 <div>
-                    <h2>Full screen animation slider</h2>
-                    <a href="#" class="button">Download</a>
+
                 </div>
             </div>
             <div class="slider slide4">
                 <div>
-                    <h2>css3 slider</h2>
-                    <a href="#" class="button">Download</a>
+
                 </div>
             </div>
         </div>
-        <!-- CDN for js of bootstrap -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-                    crossorigin="anonymous"></script> -->
 
-        <!-- </section> -->
 
-        <!-- CDN for js of bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-            </script>
-
-        <!-- jQuery  -->
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <div id="bottom-footer">
+        </div>
 
         <!-- // adding cloud animation  -->
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>
-            $.fn.center = function () {
-                this.css("position", "absolute");
-                this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window)
-                    .scrollTop()) + "px");
-                this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window)
-                    .scrollLeft()) + "px");
-                return this;
-            }
 
-            $(".right-left").on("click", function () {
-                $("#pokemon").fadeIn().center();
-                setTimeout(function () {
-                    $("#pokemon").fadeOut()
-                }, 1000);
-            });
-        </script>
+        <script src="/js/events.js"></script>
 </body>
 
 </html>
