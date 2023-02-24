@@ -20,4 +20,12 @@ router.get("/profile", authCheck, async (req, res) => {
 })
 
 
+router.get("/ourTeam", authCheck, async (req, res) => {
+
+
+    // users team
+    res.render("heads");
+    req.flash("message", "");
+})
+
 module.exports = router

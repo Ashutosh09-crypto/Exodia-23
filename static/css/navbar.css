@@ -50,9 +50,8 @@ body::after {
 }
 
 .logo {
-  order: 1;
+  /* order: 1; */
   font-family: "Windlass";
-  font-size: 2.3rem;
 }
 
 .menu-items li {
@@ -161,7 +160,6 @@ body::after {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 2.5rem;
   }
 
   .navbar-container input[type="checkbox"]:checked~.menu-items {
