@@ -3,6 +3,10 @@
     src: url("/fonts/BattlesBridge.ttf");
 }
 
+body {
+    overflow: hidden;
+}
+
 /* Slider wrapper*/
 .css-slider-wrapper {
     display: block;
@@ -133,8 +137,8 @@
     z-index: 0;
     display: none;
     text-align: center;
-    line-height: 50px;
-    font-size: 50px;
+    line-height: 30px;
+    font-size: 30px;
     color: #FFF;
     cursor: pointer;
     opacity: 0.5;
@@ -146,10 +150,15 @@
 
 .next {
     right: 1%;
+    z-index: 1;
 }
 
 .previous {
     left: 1%;
+}
+
+a {
+    cursor: pointer;
 }
 
 /* Slider pagination */
@@ -163,8 +172,8 @@
 }
 
 .slider-pagination label {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
@@ -264,6 +273,7 @@
 #pokemon {
     display: none;
     /* background-color: black; */
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 4500000;
@@ -418,6 +428,7 @@
 .arrow-right {
     -webkit-animation: bounceRight 2s infinite;
     animation: bounceRight 2s infinite;
+
 }
 
 .arrow-right svg {
@@ -431,6 +442,11 @@
 
 
 /* particular event panel */
+.control {
+    z-index: 1;
+    width: 3%;
+    height: 3%;
+}
 
 .event-wrapper {
     margin-bottom: 3%;
@@ -551,4 +567,158 @@
 
 h5 {
     font-family: "BattleBridge", "Windlass";
+}
+
+
+.map-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.918);
+    /* opacity: 0.3; */
+    margin: auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+
+    transition: all 1s ease;
+}
+
+.map {
+    /* background: url("/images/navigation-map.png") no-repeat center center/contain; */
+    /* background-size: 100% 100%; */
+    height: 600px;
+    width: 900px;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 10%;
+}
+
+.map-img {
+    height: 600px;
+    width: 900px;
+    position: absolute;
+}
+
+.map-mark {
+    height: 1%;
+    width: 1%;
+    /* background: url("/images/marker.png") no-repeat center center/cover; */
+
+
+}
+
+i {
+    font-size: 100%;
+    transition: all 0.5s ease-in;
+}
+
+i:hover {
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+
+.small-description {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1%;
+    height: auto;
+    width: 20%;
+    top: 0px;
+    right: 0px;
+    font-size: 17px;
+    color: black;
+    font-family: "Windlass";
+    background-color: rgb(204, 187, 187);
+    clip-path: url("#article-panel");
+    transition: visibility 0.5s,
+        opacity 0.5s linear;
+    /* background-color: white; */
+    z-index: 10000;
+}
+
+.visible-class {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.map div {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .map-img,
+    .map {
+        height: 400px;
+        width: 600px;
+    }
+
+    .small-description {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .map-img,
+    .map {
+        height: 350px;
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .map-img,
+    .map {
+        height: 350px;
+        width: 400px;
+    }
+
+    .small-description {
+        font-size: 12px;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .map-img,
+    .map {
+        height: 300px;
+        width: 350px;
+    }
+
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .map-img,
+    .map {
+        height: 250px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .map-img,
+    .map {
+        height: 200px;
+        width: 250px;
+    }
 }
