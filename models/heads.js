@@ -12,9 +12,10 @@ const HeadSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        subtitle:
+        mail:
         {
             type: String,
+            required: true,
         },
         instagram:
         {
@@ -29,7 +30,7 @@ const HeadSchema = new mongoose.Schema(
         {
             type: String,
         },
-        twitter:
+        facebook:
         {
             type: String,
         },
@@ -37,10 +38,7 @@ const HeadSchema = new mongoose.Schema(
         {
             type: String,
             required: true,
-        }, order:
-        {
-            type: String,
-        },
+        }
     }
 );
 

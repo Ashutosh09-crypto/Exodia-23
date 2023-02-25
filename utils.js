@@ -293,4 +293,26 @@ module.exports = {
 
         return false;
     },
+
+    findAllHeads: async function () {
+        const headTable = require("./models/heads")
+        const heads = await headTable.find({}).lean();
+
+        heads.sort(function (a, b) {
+            return a.title > b.title ? 1 : -1;
+        });
+        return heads;
+    },
+    refactorHeads: function (headsData) {
+        let heads = {}
+        for (let i = 0; i < headsData.length; i++) {
+            if (heads.hasOwnProperty(headsData[i].title)) {
+                heads[headsData[i].title].push(headsData[i]);
+            } else {
+                heads[headsData[i].title] = [];
+                i--;
+            }
+        }
+        return heads;
+    },
 }
