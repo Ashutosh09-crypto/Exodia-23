@@ -1,12 +1,15 @@
 const router = require("express").Router();
-const { findAllEvents, findEvent, createTeam, joinTeam } = require("../utils.js")
-const { authCheck } = require("../middleware/auth")
+const { findAllEvents, findEvent, createTeam, joinTeam, refactorEvents } = require("../utils.js")
+const { authCheck } = require("../middleware/auth");
 
 
 router.get("/", authCheck, async (req, res) => {
+    let events = await findAllEvents();
+    let events_cat = await refactorEvents(events)
     let context = {
         authenticated: req.isAuthenticated(),
-        events: await findAllEvents(),
+        events: events,
+        events_cat: events_cat
     }
 
     res.render("events.ejs", context);

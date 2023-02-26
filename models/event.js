@@ -18,7 +18,6 @@ const EventSchema = new mongoose.Schema(
         rulebook_link:
         {
             type: String,
-            required: true,
         },
         fixture_link:
         {
@@ -38,19 +37,20 @@ const EventSchema = new mongoose.Schema(
         fees:
         {
             type: Number,
-            required: true,
         },
         venue:
         {
             type: String,
-            required: true,
         },
         teamSize: {
             type: Number,
-            required: true
         },
         results: {
             type: String,
+        },
+        club: {
+            type: String,
+            required: true
         }
     }
 );

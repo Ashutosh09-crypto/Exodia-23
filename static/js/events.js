@@ -110,6 +110,8 @@ function checkPosition() {
 
     } else {
         $(".map-mark").hover(function () {
+            $('.small-description').text($(this).text());
+            $('.small-description').css({ "top": $(this).position().top + 20 + "px", "left": $(this).position().left + 20 + "px" })
             $('.small-description').toggle();
         }, function () {
             $('.small-description').toggle();
@@ -143,3 +145,16 @@ $('#map-btn').click(function () {
 
 
 
+// positioning of slidei using js
+function positionSlides() {
+    let slides = $('.slider');
+    let i = 0;
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.left = `${i * 100}%`;
+    }
+}
+
+positionSlides();
+
+// slidingEffect();

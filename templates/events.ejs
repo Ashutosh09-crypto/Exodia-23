@@ -27,10 +27,10 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/#about-us">About</a></li>
                 <li><a href="/events">Events</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="/profile">Profile</a></li>
                 <li><a href="/#contact-us">Contact</a></li>
                 <li><a id="map-btn">Map</a></li>
             </ul>
@@ -55,182 +55,140 @@
                 Treasure (Event) : SIUUUU
             </div>
 
+
+            <!-- map code started -->
             <div class="map">
-                <img src="/images/navigation-map.png" class='map-img'>
+
+                <!-- map img -->
+                <img src="/images/navigation-map.jpeg" class='map-img'>
 
 
 
-                <div class="grid-box">
-                    <div class="grid-list">
-                        <span id="3" class="map-mark"><i class="fa fa-close" style="color:red"></i>
-                        </span>
-                    </div>
-                </div>
+                <!-- box of each event  -->
+                <%let k=1;%>
 
-                <div class="grid-box">
-                    <div class="grid-list">
+                    <%for(let cat in events_cat) {%>
 
-                    </div>
-
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-list">
-
-                    </div>
-                </div>
-
-                <div class="grid-box">
-
-                    <div class="grid-list">
-
-                    </div>
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-list">
-
-                    </div>
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-list">
-
-                    </div>
-
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-list">
-
-                    </div>
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-list">
-
-                    </div>
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-list">
-
-                    </div>
-                </div>
-
-                <div class="grid-box">
-                    <div class="grid-list">
-
-                    </div>
+                        <div class="grid-box">
+                            <div class="grid-list">
 
 
-                </div>
+                                <!-- markers code started -->
+                                <% for(let i=0;i<events_cat[cat].length;i++) {%>
+                                    <span id="<%=k++%>" class="map-mark" style="font-size: 3px;">
 
-                <div class="grid-box">
-                    <div class="grid-list">
+                                        <p style="display: none;">Club : <%= cat %>,
+                                                Event : <%= events_cat[cat][i].name%>
+                                        </p>
 
-                    </div>
-                </div>
+                                        <i class="fa fa-close" style="color:white"></i>
+                                    </span>
 
-                <div class="grid-box">
-                    <div class="grid-list">
+                                    <%}%>
+                                        <!-- marker code ends -->
+                            </div>
+                        </div>
 
-                    </div>
+                        <!-- box ended -->
 
-                </div>
+
+                        <%}%>
+
+
 
             </div>
 
         </div>
 
 
+        <!-- map codes ended -->
+
+
         <!-- image crousel  -->
 
 
         <div class="css-slider-wrapper">
-            <input type="radio" name="slider" class="gif slide-radio1" checked id="slider_1">
-            <input type="radio" name="slider" class="gif slide-radio2" id="slider_2">
-            <input type="radio" name="slider" class="gif slide-radio3" id="slider_3">
-            <input type="radio" name="slider" class="gif slide-radio4" id="slider_4">
+
+            <!-- spwanning input radios for all events -->
+            <% k=1;%>
+                <%for(let cat in events_cat) {%>
 
 
-            <!-- <div class="slider-pagination">
+                    <% for(let i=0;i<events_cat[cat].length;i++) {%>
+                        <% if(k===1) {%>
+                            <input type="radio" name="slider" class="gif slide-radio<%=`${k}`%>" checked
+                                id="slider_<%=`${k++}`%>">
+                            <%}else{%>
+                                <input type="radio" name="slider" class="gif slide-radio<%=`${k}`%>"
+                                    id="slider_<%=`${k++}`%>">
+                                <%}%>
 
-                    <label for="slider_1" class="page1"></label>
-                    <label for="slider_2" class="page2"></label>
-                    <label for="slider_3" class="page3"></label>
-                    <label for="slider_4" class="page4"></label>
-                </div> -->
+                                    <%}%>
 
-            <div class="next control">
-                <label for="slider_1" class="gif numb1 float-left"><i class="arrow-left"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-                <label for="slider_2" class="gif numb2 float-left"><i class="arrow-left"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-                <label for="slider_3" class="gif numb3 float-left"><i class="arrow-left"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-                <label for="slider_4" class="gif numb4 float-left"><i class="arrow-left"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-            </div>
-            <div class="previous control">
-                <label for="slider_1" class="gif numb1 float-right"><i class="arrow-right"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-                <label for="slider_2" class="gif numb2 float-right"><i class="arrow-right"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-                <label for="slider_3" class="gif numb3 float-right"><i class="arrow-right"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-                <label for="slider_4" class="gif numb4 float-right"><i class="arrow-right"><%-
-                            include("partials/arrow_svg.ejs")%></i></label>
-            </div>
-
-
-            <!-- modular code starts -->
-            <div class="slider slide1">
-
-                <div class="event-wrapper">
-                    <div class="inner-page">
-
-                        <div class="heading-wrapper">
-                            <div class="upper-heading"></div>
-                            <h2>Valorant</h2>
-                            <div class="lower-heading"></div>
-                        </div>
-
-                        <div class="content-wrapper">
+                                        <%}%>
+                                            <!-- spwanning input ends -->
 
 
 
-                            <h5>RuleBook: </h5>
-
-                            <h5>Registration Fees: </h5>
-
-                            <p>About Event : Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-                                facilis</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
 
-            <!-- modular code starts -->
+
+                                            <!-- page for event code starts -->
+                                            <%k=1;%>
+                                                <%for(let cat in events_cat) {%>
 
 
-            <div class="slider slide2">
-                <div>
+                                                    <% for(let i=0;i<events_cat[cat].length;i++) {%>
+                                                        <div class="slider slide<%=`${k}`%>">
 
-                </div>
-            </div>
-            <div class="slider slide3">
-                <div>
+                                                            <div class="event-wrapper">
 
-                </div>
-            </div>
-            <div class="slider slide4">
-                <div>
+                                                                <!-- check if k > 1 -->
 
-                </div>
-            </div>
+                                                                <% if(k> 1) {%>
+                                                                    <label for="slider_<%=`${k-1}`%>"
+                                                                        class="gif numb<%=`${k-1}`%> previous float-right"><i
+                                                                            class="arrow-right"><%-
+                                                                                include("partials/arrow_svg.ejs")%></i></label>
+                                                                    <%}%>
+
+                                                                        <div class="inner-page">
+
+                                                                            <div class="heading-wrapper">
+                                                                                <div class="upper-heading"></div>
+                                                                                <h2>
+                                                                                    <%=events_cat[cat][i].name%>
+                                                                                </h2>
+                                                                                <div class="lower-heading"></div>
+                                                                            </div>
+
+                                                                            <div class="content-wrapper">
+
+
+
+                                                                                <h5>RuleBook: </h5>
+
+                                                                                <h5>Registration Fees: </h5>
+
+                                                                                <p>CLUB : <%=cat %>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <% if(k < 33) {%>
+                                                                            <label for="slider_<%=`${k+1}`%>"
+                                                                                class="gif next numb<%=`${k+1}`%> float-left"><i
+                                                                                    class="arrow-left"><%-
+                                                                                        include("partials/arrow_svg.ejs")%></i></label>
+                                                                            <%}%>
+
+                                                                                <% k++ %>
+                                                            </div>
+
+                                                        </div>
+                                                        <%}%>
+                                                            <%}%>
+
         </div>
 
 

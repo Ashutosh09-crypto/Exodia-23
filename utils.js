@@ -9,6 +9,18 @@ module.exports = {
         let eventList = await events.find({}).lean();
         return eventList;
     },
+    refactorEvents: function (eventsData) {
+        let events = {}
+        for (let i = 0; i < eventsData.length; i++) {
+            if (events.hasOwnProperty(eventsData[i].club)) {
+                events[eventsData[i].club].push(eventsData[i]);
+            } else {
+                events[eventsData[i].club] = [];
+                i--;
+            }
+        }
+        return events;
+    },
     findEvent: async function (params) {
         const eventTable = require("./models/event");
         const event = await eventTable.findOne({ name: params }).lean();
