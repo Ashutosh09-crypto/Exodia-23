@@ -5,12 +5,15 @@
 
 body {
     overflow: hidden;
+
+    background: #0b1e24 linear-gradient(to right, rgb(1, 13, 11) 0%, rgb(11, 30, 36) 25%, rgb(11, 30, 36) 75%, rgb(1, 13, 11) 100%) repeat-y;
+
 }
 
 /* Slider wrapper*/
 .css-slider-wrapper {
     display: block;
-    background: #FFF;
+    /* background: #FFF; */
     overflow: hidden;
     position: absolute;
     left: 0;
@@ -58,7 +61,7 @@ body {
 
 
 .slider {
-    background: url("https://images.alphacoders.com/902/902096.jpg") center center/cover no-repeat;
+    /* background: url("https://static.gosunoob.com/img/1/2018/03/Sea-of-Thieves-Snake-Island-Riddle-Solution-Location.jpg") no-repeat center center/cover; */
     background-repeat: no-repeat;
     background-size: auto;
     /* left: 0; */
@@ -613,7 +616,7 @@ a {
     z-index: 100000;
     height: 24%;
     top: 0;
-    background-color: #162e34f5;
+    background: black;
     border-bottom-left-radius: 32%;
     border-bottom-right-radius: 32%;
     width: 100%;
@@ -681,9 +684,13 @@ a {
 }
 
 h5 {
-    font-family: "BattleBridge", "Windlass";
+    font-family: "Windlass";
+    color: white;
 }
 
+p {
+    color: white;
+}
 
 .map-wrapper {
     position: absolute;

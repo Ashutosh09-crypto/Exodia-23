@@ -32,6 +32,7 @@
                 <li><a href="/events">Events</a></li>
                 <li><a href="/profile">Profile</a></li>
                 <li><a href="/#contact-us">Contact</a></li>
+                <li><a href="/events/joinTeam">JoinTeam</a></li>
                 <li><a id="map-btn">Map</a></li>
             </ul>
             <h1 class="logo">Events</h1>
@@ -41,8 +42,7 @@
     <!-- importing all the clipaths -->
     <%- include('partials/clip_path_svgs.ejs') %>
 
-        <img src="https://i.pinimg.com/originals/d6/d1/e0/d6d1e0bbdd2eda8f44a2125154670e82.gif" class="hidden"
-            id="pokemon">
+        <img src="https://media2.giphy.com/media/dCM60S7zcatpm8lTvB/giphy.gif" class="hidden" id="pokemon">
 
 
 
@@ -172,6 +172,10 @@
 
                                                                                 <p>CLUB : <%=cat %>
                                                                                 </p>
+
+                                                                                <a
+                                                                                    href="/events/createTeam?event=<%=events_cat[cat][i].name%>">Register
+                                                                                    Now</a>
                                                                             </div>
                                                                         </div>
 
