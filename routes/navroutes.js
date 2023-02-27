@@ -35,5 +35,15 @@ router.get("/ourTeam", authCheck, async (req, res) => {
     res.render("heads", context);
     req.flash("message", "");
 })
+router.get("/developers", authCheck, async (req, res) => {
+
+    
+    const context = {
+        authenticated: req.isAuthenticated(),
+    }
+    // users team
+    res.render("developers", context);
+    req.flash("message", "");
+})
 
 module.exports = router
