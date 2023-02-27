@@ -9,28 +9,46 @@ let header = document.querySelector('header');
 
 
 window.addEventListener('scroll', function () {
-    let value = window.scrollY;
-    stars.style.left = value * (-0.25) + 'px';
-    // moon.style.top = value * 1.05 + 'px';
-    // mountains_behind.style.top = value * 0.5 + 'px';
-    // mountains_front.style.top = value * 0 + 'px';
-    text.style.marginRight = value * (0.8) + 'px';
-    btn.style.marginRight = value * (1) + 'px';
-    // tryedit.style.marginTop =value * 1.5 + 'px';
-    // header.style.top = value * 0.5 + 'px';
+  let value = window.scrollY;
+  stars.style.left = value * (-0.25) + 'px';
+  // moon.style.top = value * 1.05 + 'px';
+  // mountains_behind.style.top = value * 0.5 + 'px';
+  // mountains_front.style.top = value * 0 + 'px';
+  text.style.marginRight = value * (0.8) + 'px';
+  btn.style.marginRight = value * (1) + 'px';
+  // tryedit.style.marginTop =value * 1.5 + 'px';
+  // header.style.top = value * 0.5 + 'px';
 
 
 })
 
 const buttons = document.querySelectorAll(".faq-toggle");
 
-for (let i=0;i<buttons.length;i++){
-    buttons[i].addEventListener("click", () =>
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", () =>
     // console.log("click")
     buttons[i].parentElement.classList.toggle("active")
   );
 }
 
-// buttons.forEach((button) => {
-  
+
+// let play = false;
+
+// $('body').click(function () {
+//   if (play == false) {
+//     $('.bgm').trigger('play');
+//     play = true;
+//   } else {
+//     $('.bgm').trigger('pause');
+//     play = false;
+//   }
 // });
+
+
+// $('.video-wrapper').click(function () {
+//   if (play == true) {
+//     $('.bgm').trigger('pause');
+//     play = false;
+//   }
+// })
+

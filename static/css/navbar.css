@@ -30,11 +30,14 @@ body::after {
 .navbar {
   position: absolute;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   /* background-color: linear-gradient(red 10%, 30%, blue 90%); */
 
   color: #ffffff;
   opacity: 0.85;
-  z-index: 100;
+  z-index: 1;
 }
 
 .navbar-container {
@@ -95,7 +98,7 @@ body::after {
     width: 30px;
     top: 20px;
     left: 20px;
-    z-index: 5;
+    z-index: 1000;
     opacity: 0;
     cursor: pointer;
   }
@@ -107,7 +110,7 @@ body::after {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 2;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -147,7 +150,8 @@ body::after {
     padding-left: 40px;
     transition: transform 0.5s ease-in-out;
     box-shadow: 5px 0px 10px 0px #aaa;
-    overflow: scroll;
+    overflow: visible;
+    z-index: 10;
   }
 
   .navbar .menu-items li {
