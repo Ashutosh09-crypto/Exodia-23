@@ -1,71 +1,119 @@
-body{
+body {
     background: #0b1e24 linear-gradient(to right, rgb(1, 13, 11) 0%, rgb(11, 30, 36) 25%, rgb(11, 30, 36) 75%, rgb(1, 13, 11) 100%) repeat-y;
     width: 100%;
+    overflow-x: hidden;
+    color: white;
+
 }
-.images{
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Windlass";
+    src: url("fonts/Windlass.ttf");
+}
+
+h2,
+h3 {
+    text-align: center;
+    font-family: "Windlass";
+}
+
+.images {
     /* width: 300px;
     height: 300px; */
     clip-path: url("article-panel");
     display: flex;
     align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
 }
-.head-details1 h3{
+
+.head-details1 h3 {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 10px;
 }
-.head-details1 p{
+
+
+.head-details1 p {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 10px;
 }
-.space{
+
+.space {
     height: 200px;
 }
-.space1{
-    height: 50px;
+
+hr {
+    width: 80%;
+    margin: 30px auto;
 }
-#im1{
+
+.space1 {
+    padding: 50px;
+    height: auto;
+    text-align: center;
+}
+
+li::marker {
+    content: "";
+}
+
+li {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#im1 {
     padding: 18px;
 }
-#im2{
+
+#im2 {
     padding: 18px;
 }
-#im3{
+
+#im3 {
     padding: 18px;
 }
-#im4{
+
+#im4 {
     padding: 18px;
-}
-@media(max-width:1450px){
-    .images{
-        flex-direction: column;
-        padding-left: 25%;
-        width: 50%;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 
-.footer{
-    position: fixed;
+
+
+.footer {
+    /* position: fixed; */
     left: 0;
     bottom: 0;
-    
     color: white;
     background-color: #354043;
     opacity: 0.5;
-    line-height: 29px;
+    margin: 0;
+    height: 50px;
     width: 100%;
     text-align: center;
 }
-.footer a{
+
+.footer a {
     color: white;
     text-decoration: none;
 }

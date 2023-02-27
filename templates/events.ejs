@@ -12,6 +12,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/events.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +43,8 @@
     <!-- importing all the clipaths -->
     <%- include('partials/clip_path_svgs.ejs') %>
 
-        <img src="https://media2.giphy.com/media/dCM60S7zcatpm8lTvB/giphy.gif" class="hidden" id="pokemon">
+        <img src="https://media2.giphy.com/media/dCM60S7zcatpm8lTvB/giphy.gif" class="hidden" id="pokemon"
+            data-aos="fade-left" data-aos-easing="linear" data-aos-duration="400">
 
 
 
@@ -60,7 +62,8 @@
             <div class="map">
 
                 <!-- map img -->
-                <img src="/images/navigation-map.jpeg" class='map-img'>
+                <img src=" /images/navigation-map.jpeg" class='map-img' data-aos="fade" data-aos-easing="linear"
+                    data-aos-duration="500">
 
 
 
@@ -204,6 +207,10 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <script src="/js/events.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 </body>
 
 </html>

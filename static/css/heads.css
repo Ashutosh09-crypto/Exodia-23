@@ -248,11 +248,16 @@ image {
 }
 
 .images {
-    padding-top: 82.2%;
+    /* padding-top: 82.2%;
+     */
+
+    height: 300px !important;
+    width: 300px !important;
     position: relative;
-    z-index: 2;
+    z-index: -1;
     margin-left: -0.5%;
     width: 100%;
+
     /* border-image: ; */
 }
 
@@ -304,13 +309,14 @@ image {
     }
 
     .head-details {
-        width: 90%;
+        width: 100%;
         padding: 15px;
         font-size: 14px;
     }
 
     .images {
-        width: 90%;
+        width: 230px !important;
+        height: 230px !important;
     }
 
     .contacts {
@@ -324,11 +330,11 @@ image {
         padding: 6px 8px;
     }
 
-    .heads {
+    /* .heads {
         padding: 5px;
         display: flex;
         align-items: flex-end;
-    }
+    } */
 }
 
 @media only screen and (max-width: 800px) and (min-width: 480px) {

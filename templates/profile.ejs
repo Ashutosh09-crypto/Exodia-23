@@ -11,6 +11,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/profile.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <div class="image-wrapper">
 
                     <div class="user-wrapper">
-                        <div id="user-img">
+                        <div id="user-img" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
 
                             <svg width="110px" height="110px" viewBox="0 0 108.43 108.66" role="presentation"
                                 aria-hidden="true" class="">
@@ -91,11 +92,13 @@
                     <div class="content-info vis" id="team_panel">
                         <div class="contactedit">
                             <!-- <img style="width:100px" src="/giphy.gif" alt=""> -->
-                            <div class="h1editleft"></div>
-                            <h1>
+                            <div class="h1editleft" data-aos="fade-right" data-aos-easing="linear"
+                                data-aos-duration="500"></div>
+                            <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
                                 Teams
                             </h1>
-                            <div class="h1editright"></div>
+                            <div class="h1editright" data-aos="fade-left" data-aos-easing="linear"
+                                data-aos-duration="500"></div>
                         </div>
 
                         <div>
@@ -123,22 +126,26 @@
                     <div class="content-info" style="display:none;" id="payments_panel">
                         <div class="contactedit">
                             <!-- <img style="width:100px" src="/giphy.gif" alt=""> -->
-                            <div class="h1editleft"></div>
-                            <h1>
+                            <div class="h1editleft" data-aos="fade-right" data-aos-easing="linear"
+                                data-aos-duration="500"></div>
+                            <h1 data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
                                 Payments
                             </h1>
-                            <div class="h1editright"></div>
+                            <div class="h1editright" data-aos="fade-left" data-aos-easing="linear"
+                                data-aos-duration="500"></div>
                         </div>
                     </div>
 
                     <div class="content-info" style="display:none;" id="achievements_panel">
                         <div class="contactedit">
                             <!-- <img style="width:100px" src="/giphy.gif" alt=""> -->
-                            <div class="h1editleft"></div>
-                            <h1>
+                            <div class="h1editleft" data-aos="fade-right" data-aos-easing="linear"
+                                data-aos-duration="500"></div>
+                            <h1 data-aos="zoom-out" data-aos-easing="linear" data-aos-duration="500">
                                 Achievements
                             </h1>
-                            <div class="h1editright"></div>
+                            <div class="h1editright" data-aos="fade-left" data-aos-easing="linear"
+                                data-aos-duration="500"></div>
                         </div>
 
                         <div><strong>Will be after fest</strong></div>
@@ -160,6 +167,11 @@
                     $(id).toggleClass('vis');
                     $(id).toggle();
                 });
+            </script>
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
             </script>
 </body>
 

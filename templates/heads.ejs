@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/heads.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 
         <!-- bottom container code -->
         <div class="head-wrapper">
-            <div class="slider">
+            <div class="slider" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
 
                 <!-- head list code -->
                 <div class="items-wrapper">
@@ -55,7 +56,7 @@
                                         style="display:inline-block; background: url('/images/icons/<%=k++%>.png') no-repeat center center/contain;"></span>
 
                                     <span id="<%= title.replace(/\s/g, "")%>" class="menu-link__inner">
-                                        <%= title%>S</a>
+                                        <%= title%></a>
                             </div>
 
                             <%}%>
@@ -66,7 +67,7 @@
             </div>
 
             <!-- torn bg -->
-            <div class="torn-bg">
+            <div class="torn-bg" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
 
             </div>
 
@@ -87,17 +88,20 @@
                                     <%}%>
 
                                         <div class="contactedit">
-                                            <div class="h1editleft"></div>
-                                            <h1>
-                                                <%=title%>S
+                                            <div class="h1editleft" data-aos="fade-right" data-aos-easing="linear"
+                                                data-aos-duration="500"></div>
+                                            <h1 data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
+                                                <%=title%>
                                             </h1>
-                                            <div class="h1editright"></div>
+                                            <div class="h1editright" data-aos="fade-left" data-aos-easing="linear"
+                                                data-aos-duration="500"></div>
                                         </div>
 
                                         <!-- head detail started -->
                                         <% for(let i=0;i<headTitles[title].length;i++) {%>
                                             <div class="heads">
-                                                <div class="images">
+                                                <div class="images" data-aos="zoom-in-up" data-aos-easing="linear"
+                                                    data-aos-duration="500">
                                                     <svg width="100%" height="100%" preserveAspectRatio="none"
                                                         aria-hidden="true" role="presentation"
                                                         viewBox="0 0 587.61 331.46">
@@ -114,7 +118,8 @@
                                                 </div>
 
 
-                                                <div class="head-details">
+                                                <div class="head-details" data-aos="flip-left" data-aos-easing="linear"
+                                                    data-aos-duration="500">
                                                     <h3 class="head-name">
                                                         <%=headTitles[title][i].name%>
                                                     </h3>
@@ -167,6 +172,11 @@
 
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
             <script src="/js/heads.js"></script>
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
 </body>
 
 </html>
