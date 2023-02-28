@@ -35,7 +35,7 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
 }
 
 
@@ -44,7 +44,7 @@ section img {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -97,7 +97,7 @@ section img#mountains_front {
 
 #try {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   right: 20%;
   width: 100%;
   height: 100vh;
@@ -124,6 +124,7 @@ section img#mountains_front {
   /* z-index: 1000; */
   /* transform: translateY(100px); */
 }
+
 
 .faqed {
   padding: 50px 100px;
@@ -180,7 +181,7 @@ section img#mountains_front {
   min-height: 100vh;
   width: 102%;
   background: url("/images/sea-of-thieves-captaincy-update-list-2.jpg") no-repeat center center/cover;
-  z-index: -1;
+  z-index: 1;
   position: relative;
   overflow-x: unset !important;
 }

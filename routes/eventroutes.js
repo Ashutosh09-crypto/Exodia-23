@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { findAllEvents, findEvent, createTeam, joinTeam, refactorEvents } = require("../utils.js")
 const { authCheck } = require("../middleware/auth");
+const { findAllColleges } = require("../readFromSheet.js");
 
 
 router.get("/", authCheck, async (req, res) => {
@@ -40,7 +41,7 @@ router.get("/createTeam", authCheck, async (req, res) => {
         event: event,
         user: req.session.user,
         authenticated: req.isAuthenticated(),
-        colleges: ["IIT MANDI", "IIT MONTY"],
+        colleges: await findAllColleges(),
     }
     res.render('createteam.ejs', context)
 })

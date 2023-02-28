@@ -116,6 +116,52 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
+
+
+        <script>
+            const colleges = JSON.parse('<%- JSON.stringify(colleges) %>')
+            const college_suggestions = document.getElementById('college-suggestions')
+            const input_box = document.getElementById('college')
+
+            input_box.addEventListener('focus', () => {
+                college_suggestions.style.display = 'block'
+            })
+
+            var regex_expr = "|"
+            colleges.forEach(element => {
+                // create regex for the input
+                regex_expr += element + "|"
+                //append colleges in li under #college-suggestions
+                const suggestion = document.createElement('li')
+                suggestion.innerText = element
+                suggestion.style.padding = "5px 10px"
+                suggestion.style.color = 'red'
+                suggestion.style.textAlign = 'center'
+                suggestion.style.cursor = 'pointer'
+                suggestion.addEventListener('mouseover', () => { suggestion.style.background = 'white' })
+                suggestion.addEventListener('mouseout', () => { suggestion.style.background = 'black' })
+                suggestion.addEventListener('click', () => { input_box.value = suggestion.innerText })
+                college_suggestions.appendChild(suggestion)
+            });
+
+            input_box.addEventListener('input', (e) => {
+                college_suggestions.querySelectorAll('li').forEach((element) => {
+                    if (element.innerText.toLowerCase().includes(e.target.value.toLowerCase())) {
+                        element.style.display = 'block'
+                    } else {
+                        element.style.display = 'none'
+                    }
+                })
+            })
+
+            input_box.setAttribute('pattern', regex_expr)
+
+            input_box.addEventListener('blur', () => {
+                setTimeout(() => {
+                    college_suggestions.style.display = 'none'
+                }, 500)
+            })
+        </script>
 </body>
 
 </html>
