@@ -291,6 +291,7 @@ image {
 
     .slider {
         width: 50vw;
+        display: none;
     }
 
     .items a {
@@ -336,6 +337,14 @@ image {
         align-items: flex-end;
     } */
 }
+
+@media only screen and (max-width: 600px) {
+    .slider {
+        display: none;
+    }
+}
+
+
 
 @media only screen and (max-width: 800px) and (min-width: 480px) {
     /* .container {
