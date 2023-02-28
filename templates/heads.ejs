@@ -13,173 +13,175 @@
     <link rel="stylesheet" href="/css/scrollbar.css">
 </head>
 
-<body>
+<body onload="load()">
+    <%- include('partials/preloader.ejs') %>
 
-    <%- include('partials/clip_path_svgs.ejs') %>
+        <%- include('partials/clip_path_svgs.ejs') %>
 
 
-        <!-- navbar code -->
+            <!-- navbar code -->
 
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <input type="checkbox" name="" id="">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
+            <nav class="navbar">
+                <div class="navbar-container container">
+                    <input type="checkbox" name="" id="">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <ul class="menu-items">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#about-us">About</a></li>
+                        <li><a href="/events">Events</a></li>
+                        <li><a href="/#contact-us">Contact</a></li>
+
+                    </ul>
+                    <h1 class="logo">HEADS</h1>
                 </div>
-                <ul class="menu-items">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/#about-us">About</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/#contact-us">Contact</a></li>
+            </nav>
 
-                </ul>
-                <h1 class="logo">HEADS</h1>
-            </div>
-        </nav>
-
-        <!-- navbar code ends -->
+            <!-- navbar code ends -->
 
 
-        <!-- bottom container code -->
-        <div class="head-wrapper">
-            <div class="slider" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+            <!-- bottom container code -->
+            <div class="head-wrapper">
+                <div class="slider" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
 
-                <!-- head list code -->
-                <div class="items-wrapper">
-                    <%let k=1%>
-                        <% for(let title in headTitles) {%>
-                            <div class="items">
-                                <a href="#" class="menu-link menu-item__link" aria-expanded="false" role="menuitem">
+                    <!-- head list code -->
+                    <div class="items-wrapper">
+                        <%let k=1%>
+                            <% for(let title in headTitles) {%>
+                                <div class="items">
+                                    <a href="#" class="menu-link menu-item__link" aria-expanded="false" role="menuitem">
 
-                                    <span class="title-icon"
-                                        style="display:inline-block; background: url('/images/icons/<%=k++%>.png') no-repeat center center/contain;"></span>
+                                        <span class="title-icon"
+                                            style="display:inline-block; background: url('/images/icons/<%=k++%>.png') no-repeat center center/contain;"></span>
 
-                                    <span id="<%= title.replace(/\s/g, "")%>" class="menu-link__inner">
-                                        <%= title%></a>
-                            </div>
+                                        <span id="<%= title.replace(/\s/g, "")%>" class="menu-link__inner">
+                                            <%= title%></a>
+                                </div>
 
-                            <%}%>
+                                <%}%>
+                    </div>
+
+                    <!-- head list code ends -->
+
                 </div>
 
-                <!-- head list code ends -->
+                <!-- torn bg -->
+                <div class="torn-bg" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
 
-            </div>
+                </div>
 
-            <!-- torn bg -->
-            <div class="torn-bg" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
-
-            </div>
-
-            <!-- torn-bg ends -->
+                <!-- torn-bg ends -->
 
 
-            <div class="head-container">
+                <div class="head-container">
 
-                <!-- head container code started -->
+                    <!-- head container code started -->
 
-                <% for(let title in headTitles) {%>
+                    <% for(let title in headTitles) {%>
 
-                    <% if(Object.keys(headTitles)[0]===title) {%>
-                        <div class="heading vis" id="<%= title.replace(/\s/g, "")%>_heads">
-                            <%} else {%>
-                                <div class="heading hidden" id="<%= title.replace(/\s/g, "")%>_heads">
+                        <% if(Object.keys(headTitles)[0]===title) {%>
+                            <div class="heading vis" id="<%= title.replace(/\s/g, "")%>_heads">
+                                <%} else {%>
+                                    <div class="heading hidden" id="<%= title.replace(/\s/g, "")%>_heads">
 
-                                    <%}%>
+                                        <%}%>
 
-                                        <div class="contactedit">
-                                            <div class="h1editleft" data-aos="fade-right" data-aos-easing="linear"
-                                                data-aos-duration="500"></div>
-                                            <h1 data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
-                                                <%=title%>
-                                            </h1>
-                                            <div class="h1editright" data-aos="fade-left" data-aos-easing="linear"
-                                                data-aos-duration="500"></div>
-                                        </div>
+                                            <div class="contactedit">
+                                                <div class="h1editleft" data-aos="fade-right" data-aos-easing="linear"
+                                                    data-aos-duration="500"></div>
+                                                <h1 data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
+                                                    <%=title%>
+                                                </h1>
+                                                <div class="h1editright" data-aos="fade-left" data-aos-easing="linear"
+                                                    data-aos-duration="500"></div>
+                                            </div>
 
-                                        <!-- head detail started -->
-                                        <% for(let i=0;i<headTitles[title].length;i++) {%>
-                                            <div class="heads">
-                                                <div class="images" data-aos="zoom-in-up" data-aos-easing="linear"
-                                                    data-aos-duration="500">
-                                                    <svg width="100%" height="100%" preserveAspectRatio="none"
-                                                        aria-hidden="true" role="presentation"
-                                                        viewBox="0 0 587.61 331.46">
-                                                        <rect width="100%" height="100%" class="placeholder"
-                                                            clip-path="url(#article-panel)">
-                                                        </rect>
-                                                        <g class="cliped-image">
-                                                            <image preserveAspectRatio="none" width="100%" height="100%"
-                                                                clip-path="url(#article-panel)"
-                                                                xlink:href="<%=headTitles[title][i].image_link%>">
-                                                            </image>
-                                                        </g>
-                                                    </svg>
-                                                </div>
+                                            <!-- head detail started -->
+                                            <% for(let i=0;i<headTitles[title].length;i++) {%>
+                                                <div class="heads">
+                                                    <div class="images" data-aos="zoom-in-up" data-aos-easing="linear"
+                                                        data-aos-duration="500">
+                                                        <svg width="100%" height="100%" preserveAspectRatio="none"
+                                                            aria-hidden="true" role="presentation"
+                                                            viewBox="0 0 587.61 331.46">
+                                                            <rect width="100%" height="100%" class="placeholder"
+                                                                clip-path="url(#article-panel)">
+                                                            </rect>
+                                                            <g class="cliped-image">
+                                                                <image preserveAspectRatio="none" width="100%"
+                                                                    height="100%" clip-path="url(#article-panel)"
+                                                                    xlink:href="<%=headTitles[title][i].image_link%>">
+                                                                </image>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
 
 
-                                                <div class="head-details" data-aos="flip-left" data-aos-easing="linear"
-                                                    data-aos-duration="500">
-                                                    <h3 class="head-name">
-                                                        <%=headTitles[title][i].name%>
-                                                    </h3>
-                                                    <p class="head-mail">
-                                                        <i class="fa fa-envelope"></i>
-                                                        <%=headTitles[title][i].mail%>
-                                                    </p>
-                                                    <p class="head-phone">
+                                                    <div class="head-details" data-aos="flip-left"
+                                                        data-aos-easing="linear" data-aos-duration="500">
+                                                        <h3 class="head-name">
+                                                            <%=headTitles[title][i].name%>
+                                                        </h3>
+                                                        <p class="head-mail">
+                                                            <i class="fa fa-envelope"></i>
+                                                            <%=headTitles[title][i].mail%>
+                                                        </p>
+                                                        <p class="head-phone">
 
-                                                        <i class="fa fa-phone"></i>
-                                                        <%=headTitles[title][i].phone%>
-                                                    </p>
-                                                    <div class="contacts">
-                                                        <% if(headTitles[title][i].instagram !="" ) { %>
-                                                            <a style="text-decoration: none; color: black;"
-                                                                href="<%=headTitles[title][i].instagram%>"><i
-                                                                    class="fa fa-instagram"
-                                                                    style="font-size:25px"></i></a>
-                                                            <%}%>
+                                                            <i class="fa fa-phone"></i>
+                                                            <%=headTitles[title][i].phone%>
+                                                        </p>
+                                                        <div class="contacts">
+                                                            <% if(headTitles[title][i].instagram !="" ) { %>
+                                                                <a style="text-decoration: none; color: black;"
+                                                                    href="<%=headTitles[title][i].instagram%>"><i
+                                                                        class="fa fa-instagram"
+                                                                        style="font-size:25px"></i></a>
+                                                                <%}%>
 
-                                                                <% if(headTitles[title][i].linkedin !="" ) { %>
-                                                                    <a style="text-decoration: none; color: black;"
-                                                                        href="<%=headTitles[title][i].linkedin%>"><i
-                                                                            class="fa fa-linkedin-square"
-                                                                            style="font-size:25px"></i></a>
+                                                                    <% if(headTitles[title][i].linkedin !="" ) { %>
+                                                                        <a style="text-decoration: none; color: black;"
+                                                                            href="<%=headTitles[title][i].linkedin%>"><i
+                                                                                class="fa fa-linkedin-square"
+                                                                                style="font-size:25px"></i></a>
 
-                                                                    <%}%>
+                                                                        <%}%>
 
-                                                                        <% if(headTitles[title][i].facebook !="" ) { %>
-                                                                            <a style="text-decoration: none; color: black;"
-                                                                                href="<%=headTitles[title][i].facebook%>"><i
-                                                                                    class="fa fa-facebook"
-                                                                                    style="font-size:25px"></i></a>
-                                                                            <%}%>
+                                                                            <% if(headTitles[title][i].facebook !="" ) {
+                                                                                %>
+                                                                                <a style="text-decoration: none; color: black;"
+                                                                                    href="<%=headTitles[title][i].facebook%>"><i
+                                                                                        class="fa fa-facebook"
+                                                                                        style="font-size:25px"></i></a>
+                                                                                <%}%>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <%}%>
+                                                <%}%>
 
 
-                                                <!-- head detail ended -->
-                                </div>
-                                <%}%>
-                                    <!-- head container code ended -->
+                                                    <!-- head detail ended -->
+                                    </div>
+                                    <%}%>
+                                        <!-- head container code ended -->
 
-                        </div>
+                            </div>
 
 
-            </div>
+                </div>
 
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-            <script src="/js/heads.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                <script src="/js/heads.js"></script>
 
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script>
-                AOS.init();
-            </script>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
 
-            <script src="/js/navbar.js"></script>
+                <script src="/js/navbar.js"></script>
 </body>
 
 </html>
