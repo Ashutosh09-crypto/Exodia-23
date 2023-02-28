@@ -8,7 +8,7 @@ $.fn.center = function () {
     return this;
 }
 
-$("input").on("change", function () {
+$(".gif").click(function () {
     $("#pokemon").fadeIn().center();
     setTimeout(function () {
         $("#pokemon").fadeOut()

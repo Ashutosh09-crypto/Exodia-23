@@ -21,7 +21,7 @@
 
     <nav class="navbar">
         <div class="navbar-container container">
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="nav-btn">
             <div class="hamburger-lines">
                 <span class="line line1"></span>
                 <span class="line line2"></span>
@@ -43,8 +43,7 @@
     <!-- importing all the clipaths -->
     <%- include('partials/clip_path_svgs.ejs') %>
 
-        <img src="https://media2.giphy.com/media/dCM60S7zcatpm8lTvB/giphy.gif" class="hidden" id="pokemon"
-            data-aos="fade-left" data-aos-easing="linear" data-aos-duration="400">
+        <img src="https://media2.giphy.com/media/dCM60S7zcatpm8lTvB/giphy.gif" class="hidden" id="pokemon">
 
 
 
@@ -211,6 +210,8 @@
         <script>
             AOS.init();
         </script>
+
+        <script src="/js/navbar.js"></script>
 </body>
 
 </html>

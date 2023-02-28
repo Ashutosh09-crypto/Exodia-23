@@ -79,6 +79,10 @@ body::after {
     opacity: 0.95;
   }
 
+  .navbar a {
+    color: black;
+  }
+
   .navbar-container input[type="checkbox"],
   .navbar-container .hamburger-lines {
     display: block;
@@ -141,7 +145,7 @@ body::after {
     padding-top: 100px;
     background: #fff;
     height: 100vh;
-    max-width: 300px;
+    width: 300px;
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
@@ -151,6 +155,9 @@ body::after {
     box-shadow: 5px 0px 10px 0px #aaa;
     overflow: visible;
     z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .navbar .menu-items li {
@@ -187,4 +194,8 @@ body::after {
   .navbar-container input[type="checkbox"]:checked~.logo {
     display: none;
   }
+}
+
+.overflow-hidden {
+  overflow-y: hidden !important;
 }
