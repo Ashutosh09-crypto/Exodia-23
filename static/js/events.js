@@ -92,7 +92,23 @@ function checkPosition() {
     if (window.matchMedia('(max-width: 1000px)').matches) {
 
         $(".map-mark").single_double_click(function () {
-            $('.small-description').toggle();
+            $('.small-description').show();
+            $('.small-description').text($(this).text());
+
+
+            $('.small-description').css({ "top": $(this).position().top + 40 + "px", "left": $(this).position().left + "px" });
+
+            let des_width = $('.small-description').width();
+            let right_point = $('.small-description').position().left + des_width;
+
+            let img_right = img_left + img_width;
+
+            if (img_right < right_point) {
+                $('.small-description').css('left', 'initial');
+                $('.small-description').css("right", 0);
+
+            }
+            // $('.small-description').toggle();
         }, function () {
             let id = $(this).attr('id');
 

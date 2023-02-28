@@ -29,43 +29,40 @@
 
 
 
-<body onload="load()">
-    <%- include('partials/preloader.ejs') %>
+<body>
 
-        <!-- importing navbar from the partials -->
-        <%- include('partials/navbar.ejs') %>
+    <!-- importing navbar from the partials -->
+    <%- include('partials/navbar.ejs') %>
 
 
-            <div class="wrapper">
-                <div class="container mx-auto row align-items-center">
-                    <form class="mx-auto d-flex flex-column align-items-center"
-                        action="/events/createTeam?event=<%=event.name%>" method="POST" style="width: 500px">
-                        <div class="title-section container">
-                            <label class="heading m-0 py-2" for="TeamName">Team Name</label>
-                        </div>
-                        <input required
-                            style="text-align: center;width: 70%;padding: 5px;font-size: 16px;margin-left: 30px;margin-bottom: 20px;border-radius: 10px;"
-                            name="TeamName" id="TeamName" type="text" placeholder="Enter Team Name"
-                            autocomplete="off" />
+        <div class="wrapper">
+            <div class="container mx-auto row align-items-center">
+                <form class="mx-auto d-flex flex-column align-items-center"
+                    action="/events/createTeam?event=<%=event.name%>" method="POST" style="width: 500px">
+                    <div class="title-section container">
+                        <label class="heading m-0 py-2" for="TeamName">Team Name</label>
+                    </div>
+                    <input required
+                        style="text-align: center;width: 70%;padding: 5px;font-size: 16px;margin-left: 30px;margin-bottom: 20px;border-radius: 10px;"
+                        name="TeamName" id="TeamName" type="text" placeholder="Enter Team Name" autocomplete="off" />
 
-                        <div class="title-section container">
-                            <label class="heading m-0 py-2" for="college">College Name</label>
-                        </div>
-                        <div style="width:100%;margin-bottom: 20px;position: relative;"
-                            class="d-flex d-flex-col justify-content-center">
-                            <input class="justify-center"
-                                style="text-align: center; color:black; width: 70%; padding: 5px; font-size: 16px; border-radius: 10px;"
-                                name="college" id="college" placeholder="Enter College Name" required
-                                autocomplete="off">
-                            <ul class="example" id='college-suggestions'
-                                style="z-index:2;display:none;list-style-type:none;position: absolute;top:100%;margin:5px;background-color: black; width:70%;max-height:calc(5*(1rem + 20px));overflow-y: scroll;">
-                            </ul>
-                        </div>
+                    <div class="title-section container">
+                        <label class="heading m-0 py-2" for="college">College Name</label>
+                    </div>
+                    <div style="width:100%;margin-bottom: 20px;position: relative;"
+                        class="d-flex d-flex-col justify-content-center">
+                        <input class="justify-center"
+                            style="text-align: center; color:black; width: 70%; padding: 5px; font-size: 16px; border-radius: 10px;"
+                            name="college" id="college" placeholder="Enter College Name" required autocomplete="off">
+                        <ul class="example" id='college-suggestions'
+                            style="z-index:2;display:none;list-style-type:none;position: absolute;top:100%;margin:5px;background-color: black; width:70%;max-height:calc(5*(1rem + 20px));overflow-y: scroll;">
+                        </ul>
+                    </div>
 
-                        <div class="title-section container" style="margin-top: 30px">
-                            <label class="heading m-0 py-2" for="phone">Phone Number</label>
-                        </div>
-                        <input required style="
+                    <div class="title-section container" style="margin-top: 30px">
+                        <label class="heading m-0 py-2" for="phone">Phone Number</label>
+                    </div>
+                    <input required style="
                         text-align: center;
                         font-size: 16px;
                         width: 70%;
@@ -73,101 +70,101 @@
                         margin-left: 30px;
                         border-radius: 10px;
                       " name="phone" id="phone" type="text" pattern="[0-9]{10}" placeholder="Enter Phone Number"
-                            autocomplete="off" />
-                        <!-- <hr> -->
+                        autocomplete="off" />
+                    <!-- <hr> -->
 
 
 
-                        <div class="title-section container" style="margin-top: 40px">
-                            <label class="heading m-0 py-2" for="registration" id="regfee">Registration Fee -
-                                <span id="amount">
-                                    <%= event.fees%>
-                                </span>
-                            </label>
-                        </div>
-                        <p style="font-size: 16px">
-                            You have to pay this fees after registration, through payment
-                            portal.
-                        </p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled"
-                                checked disabled />
-                            <label class="form-check-label" for="flexCheckCheckedDisabled">
-                                <p>
-                                    I have understood the
-                                    <a target="_blank"
-                                        href="https://docs.google.com/document/d/17PjtDxJU5LqRwnL999qoHMTUzI2UJyhoOB9MumLFTrc/edit?usp=sharing">terms
-                                        and policy</a>
-                                    of IIT Mandi
-                                </p>
-                            </label>
-                        </div>
+                    <div class="title-section container" style="margin-top: 40px">
+                        <label class="heading m-0 py-2" for="registration" id="regfee">Registration Fee -
+                            <span id="amount">
+                                <%= event.fees%>
+                            </span>
+                        </label>
+                    </div>
+                    <p style="font-size: 16px">
+                        You have to pay this fees after registration, through payment
+                        portal.
+                    </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked
+                            disabled />
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">
+                            <p>
+                                I have understood the
+                                <a target="_blank"
+                                    href="https://docs.google.com/document/d/17PjtDxJU5LqRwnL999qoHMTUzI2UJyhoOB9MumLFTrc/edit?usp=sharing">terms
+                                    and policy</a>
+                                of IIT Mandi
+                            </p>
+                        </label>
+                    </div>
 
-                        <button style="
+                    <button style="
                         width: 30%;
                         padding: 10px;
                         border-radius: 30px;
                         margin: 40px;
                         margin-left: 30px;
                       " class="btn btn-primary">
-                            Confirm
-                        </button>
-                    </form>
-                </div>
+                        Confirm
+                    </button>
+                </form>
             </div>
+        </div>
 
-            <!-- CDN for js of bootstrap -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-                crossorigin="anonymous"></script>
+        <!-- CDN for js of bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
 
 
-            <script>
-                const colleges = JSON.parse('<%- JSON.stringify(colleges) %>')
-                const college_suggestions = document.getElementById('college-suggestions')
-                const input_box = document.getElementById('college')
+        <script>
+            const colleges = JSON.parse('<%- JSON.stringify(colleges) %>')
+            const college_suggestions = document.getElementById('college-suggestions')
+            const input_box = document.getElementById('college')
 
-                input_box.addEventListener('focus', () => {
-                    college_suggestions.style.display = 'block'
+            input_box.addEventListener('focus', () => {
+                college_suggestions.style.display = 'block'
+            })
+
+            var regex_expr = "|"
+            colleges.forEach(element => {
+                // create regex for the input
+                regex_expr += element + "|"
+                //append colleges in li under #college-suggestions
+                const suggestion = document.createElement('li')
+                suggestion.innerText = element
+                suggestion.style.padding = "5px 10px"
+                suggestion.style.color = 'red'
+                suggestion.style.textAlign = 'center'
+                suggestion.style.cursor = 'pointer'
+                suggestion.addEventListener('mouseover', () => { suggestion.style.background = 'white' })
+                suggestion.addEventListener('mouseout', () => { suggestion.style.background = 'black' })
+                suggestion.addEventListener('click', () => { input_box.value = suggestion.innerText })
+                college_suggestions.appendChild(suggestion)
+            });
+
+            input_box.addEventListener('input', (e) => {
+                college_suggestions.querySelectorAll('li').forEach((element) => {
+                    if (element.innerText.toLowerCase().includes(e.target.value.toLowerCase())) {
+                        element.style.display = 'block'
+                    } else {
+                        element.style.display = 'none'
+                    }
                 })
+            })
 
-                var regex_expr = "|"
-                colleges.forEach(element => {
-                    // create regex for the input
-                    regex_expr += element + "|"
-                    //append colleges in li under #college-suggestions
-                    const suggestion = document.createElement('li')
-                    suggestion.innerText = element
-                    suggestion.style.padding = "5px 10px"
-                    suggestion.style.color = 'red'
-                    suggestion.style.textAlign = 'center'
-                    suggestion.style.cursor = 'pointer'
-                    suggestion.addEventListener('mouseover', () => { suggestion.style.background = 'white' })
-                    suggestion.addEventListener('mouseout', () => { suggestion.style.background = 'black' })
-                    suggestion.addEventListener('click', () => { input_box.value = suggestion.innerText })
-                    college_suggestions.appendChild(suggestion)
-                });
+            input_box.setAttribute('pattern', regex_expr)
 
-                input_box.addEventListener('input', (e) => {
-                    college_suggestions.querySelectorAll('li').forEach((element) => {
-                        if (element.innerText.toLowerCase().includes(e.target.value.toLowerCase())) {
-                            element.style.display = 'block'
-                        } else {
-                            element.style.display = 'none'
-                        }
-                    })
-                })
+            input_box.addEventListener('blur', () => {
+                setTimeout(() => {
+                    college_suggestions.style.display = 'none'
+                }, 500)
+            })
+        </script>
 
-                input_box.setAttribute('pattern', regex_expr)
-
-                input_box.addEventListener('blur', () => {
-                    setTimeout(() => {
-                        college_suggestions.style.display = 'none'
-                    }, 500)
-                })
-            </script>
-
-            <script src="/js/navbar.js"></script>
+        <script src="/js/navbar.js"></script>
 </body>
 
 </html>
