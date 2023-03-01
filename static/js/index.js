@@ -32,17 +32,25 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 
-// let play = false;
+let play = false;
 
-// $('body').click(function () {
-//   if (play == false) {
-//     $('.bgm').trigger('play');
-//     play = true;
-//   } else {
-//     $('.bgm').trigger('pause');
-//     play = false;
-//   }
-// });
+$('#titl').click(function () {
+  if (play == false) {
+    $('.bgm').trigger('play');
+    play = true;
+  }
+});
+
+$('#play-pause').click(function () {
+  if (play == false) {
+    $('.bgm').trigger('play');
+    play = true;
+  }
+  else {
+    play = false;
+    $('.bgm').trigger('pause');
+  }
+})
 
 
 // $('.video-wrapper').click(function () {

@@ -7,6 +7,10 @@ module.exports = {
     findAllEvents: async function (req) {
         const events = require("./models/event");
         let eventList = await events.find({}).lean();
+
+        eventList.sort(function (a, b) {
+            return a.order > b.order ? 1 : -1;
+        });
         return eventList;
     },
     refactorEvents: function (eventsData) {

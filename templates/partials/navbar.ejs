@@ -14,12 +14,15 @@
             <li><span class="list-icon"></span><a href="/profile">Profile</a></li>
             <li><span class="list-icon"></span><a href="/#contact-us">Contact</a></li>
             <li><span class="list-icon"></span><a href="/ourTeam">Team</a></li>
+
             <li class="sze"><span class="list-icon"></span><a href="/developers">Developers</a></li>
             <% if(authenticated) {%>
                 <li><span class="list-icon"></span><a href="/auth/logout">Logout</a></li>
                 <%}else {%>
                     <li><span class="list-icon"></span><a href="/auth/google">Login</a></li>
                     <%}%>
+                        <li><span class="list-icon"></span><i id="play-pause" class="fa fa-volume-up"
+                                style="font-size:20px"></i></li>
         </ul>
         <h1 class="logo">Exodia</h1>
     </div>

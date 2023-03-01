@@ -51,6 +51,9 @@ const EventSchema = new mongoose.Schema(
         club: {
             type: String,
             required: true
+        },
+        order: {
+            type: Number,
         }
     }
 );
