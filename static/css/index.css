@@ -180,7 +180,7 @@ section img#mountains_front {
 
 #about-us {
   min-height: 110vh;
-  width: 102%;
+  width: 100%;
   background: url("/images/sea-of-thieves-captaincy-update-list-2.jpg") no-repeat center center/cover;
   z-index: 1;
   position: relative;
@@ -826,6 +826,12 @@ videoedit {
 @media screen and (max-width:990px) {
   .counter {
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  #about-us {
+    min-height: 120vh;
   }
 }
 
