@@ -315,7 +315,10 @@ module.exports = {
         const heads = await headTable.find({}).lean();
 
         heads.sort(function (a, b) {
-            return a.title > b.title ? 1 : -1;
+            if (a.order === b.order)
+                return a.title > b.title ? 1 : -1;
+            else
+                return a.order > b.order ? 1 : -1;
         });
         return heads;
     },
@@ -331,4 +334,9 @@ module.exports = {
         }
         return heads;
     },
+    findAllFaqs: async function () {
+        const faqTable = require("./models/faq");
+        const faqs = await faqTable.find({}).lean();
+        return faqs;
+    }
 }

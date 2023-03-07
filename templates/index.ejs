@@ -191,77 +191,33 @@
                     <div class="h1editright" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
                     </div>
                 </div>
+
+                <div class="faq-description">
+                    Steady there mate! Edward’s been kinda cranky since morning, one mistake and you be walking the
+                    plank. Blackbeard could
+                    really make your family mourning…Ehee. Fret not! With this loyal advisor it’s the deck for
+                    you…Probably~ So let min
+                    knowledge clear us doubts and sing shanties!
+                </div>
                 <div class="faqed">
                     <div class="faq-container">
-                        <div class="faq">
-                            <h3 class="faq-title">
-                                Lorem ipsum dolor sit amet.
-                            </h3>
-                            <p class="faq-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nobis,
-                                repellat
-                                neque non
-                                dicta
-                                fugiat veritatis sit delectus perspiciatis quis?</p>
-                            <button class="faq-toggle">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
 
-                        <div class="faq">
-                            <h3 class="faq-title">
-                                Lorem ipsum dolor sit amet.
-                            </h3>
-                            <p class="faq-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nobis,
-                                repellat
-                                neque non
-                                dicta
-                                fugiat veritatis sit delectus perspiciatis quis?</p>
-                            <button class="faq-toggle">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-
-                        <div class="faq">
-                            <h3 class="faq-title">
-                                Lorem ipsum dolor sit amet.
-                            </h3>
-                            <p class="faq-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nobis,
-                                repellat
-                                neque non
-                                dicta
-                                fugiat veritatis sit delectus perspiciatis quis?</p>
-                            <button class="faq-toggle">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-
-                        <div class="faq">
-                            <h3 class="faq-title">
-                                Lorem ipsum dolor sit amet.
-                            </h3>
-                            <p class="faq-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nobis,
-                                repellat
-                                neque non
-                                dicta
-                                fugiat veritatis sit delectus perspiciatis quis?</p>
-                            <button class="faq-toggle">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-
-                        <div class="faq">
-                            <h3 class="faq-title">
-                                Lorem ipsum dolor sit amet.
-                            </h3>
-                            <p class="faq-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nobis,
-                                repellat
-                                neque non
-                                dicta
-                                fugiat veritatis sit delectus perspiciatis quis?</p>
-                            <button class="faq-toggle">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
+                        <%for(let i=0;i<faqs.length;i++){ %>
+                            <div class="faq">
+                                <h3 class="faq-title">
+                                    <span>
+                                        <%=i+1 %>.
+                                    </span>
+                                    <%=faqs[i].question %>
+                                </h3>
+                                <p class="faq-text">
+                                    <%=faqs[i].answer %>
+                                </p>
+                                <button class="faq-toggle">
+                                    <i class="fas fa-angle-down"></i>
+                                </button>
+                            </div>
+                            <%}%>
                     </div>
                 </div>
                 <br>
@@ -289,13 +245,13 @@
                     <div class="second info">
                         <i class="fa fa-phone" style="font-size:48px;color:white"></i>
                         <br>
-                        <h3>Admin 123456789</h3>
+                        <h3>Convenor 9053437219</h3>
                     </div>
                     <div class="third info">
                         <i class='fa fa-envelope' style='font-size:48px;color:white'></i>
                         <br>
-                        <h3>admin@exodia.in</h3>
-                        <h3>publicity@exodia.in</h3>
+                        <h3>admin@exodia.co.in</h3>
+                        <h3>publicity@exodia.co.in</h3>
                     </div>
                 </div>
 

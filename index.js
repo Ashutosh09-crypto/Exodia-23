@@ -15,6 +15,7 @@ const eventRoutes = require("./routes/eventroutes.js")
 const authRoutes = require("./routes/authroutes")
 const navRoutes = require("./routes/navroutes")
 const teamRoutes = require("./routes/teamroutes")
+const { findAllFaqs } = require("./utils")
 
 
 const port = process.env.PORT || 5000;
@@ -89,6 +90,7 @@ app.use("/", teamRoutes)
 app.get("/", async (req, res) => {
     const context = {
         authenticated: req.isAuthenticated(),
+        faqs: await findAllFaqs()
     }
     res.render("index", context);
 })

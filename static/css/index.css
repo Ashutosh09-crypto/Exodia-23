@@ -179,7 +179,7 @@ section img#mountains_front {
 }
 
 #about-us {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 102%;
   background: url("/images/sea-of-thieves-captaincy-update-list-2.jpg") no-repeat center center/cover;
   z-index: 1;
@@ -387,8 +387,33 @@ footer {
   margin: 0 auto;
   border-radius: 10px;
   /* background-color: #ffffff00; */
-  overflow: hidden;
+  overflow-y: scroll;
+  height: 60vh;
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+
+.faq-container::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgb(255, 0, 0); */
+  border-radius: 10px;
+
+  /* background-color: transparent; */
+}
+
+.faq-container::-webkit-scrollbar {
+  width: 5px;
+  display: block;
+  right: 10px;
+  background-color: black;
+}
+
+.faq-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); */
+  background-color: rgba(129, 129, 129, 0.767);
+}
+
+.faq-container::-webkit-scrollbar-track-piece:start {
+  background: transparent;
 }
 
 .faq {
@@ -411,7 +436,10 @@ footer {
 
 .faq-title {
   margin: 0 35px 0 0;
+  /* text-align: left; */
 }
+
+
 
 .faq-text {
   margin: 30px 0 0;
@@ -799,4 +827,11 @@ videoedit {
   .counter {
     margin-bottom: 40px;
   }
+}
+
+
+.faq-description {
+  color: white;
+  margin: 20px auto;
+  width: 70%;
 }

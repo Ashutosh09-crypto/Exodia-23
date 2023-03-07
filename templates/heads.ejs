@@ -49,13 +49,13 @@
 
                 <!-- head list code -->
                 <div class="items-wrapper">
-                    <%let k=1%>
+                    <%let k=0%>
                         <% for(let title in headTitles) {%>
                             <div class="items">
                                 <a href="#" class="menu-link menu-item__link" aria-expanded="false" role="menuitem">
 
                                     <span class="title-icon"
-                                        style="display:inline-block; background: url('/images/icons/<%=k++%>.png') no-repeat center center/contain;"></span>
+                                        style="display:inline-block; background: url('/images/icons/<%=(k++)%14%>.png') no-repeat center center/contain;"></span>
 
                                     <span id="<%= title.replace(/\s/g, "")%>" class="menu-link__inner">
                                         <%= title%></a>
