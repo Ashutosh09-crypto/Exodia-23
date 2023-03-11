@@ -841,3 +841,11 @@ videoedit {
   margin: 20px auto;
   width: 70%;
 }
+
+.overlow_vis{
+  overflow: visible !important;
+}
+
+.padd{
+  padding: 1%;
+}
