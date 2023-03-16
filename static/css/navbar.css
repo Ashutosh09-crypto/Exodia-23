@@ -185,9 +185,9 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  height: 200px;
+  height: 205px;
   width: 102%;
-  background: url("/images/tray-header-large.png") no-repeat center center/cover;
+  background: url("/images/exodia_logo.png") no-repeat center center/cover ;
 
 }
 
