@@ -244,6 +244,11 @@ body::after {
   transform: rotate(-45deg);
 }
 
+.headlogo{
+  position: relative;
+  top: 50%;
+}
+
 /* experiment */
 
 @media (max-width: 900px) {
@@ -329,7 +334,9 @@ body::after {
     right: 15px;
     height: 150%;
   }
-
+  .headlogo{
+    top: 10px;
+  }
   .navbar-container input[type="checkbox"]:checked~.menu-items {
     transform: translateX(0);
     overflow: scroll !important;
