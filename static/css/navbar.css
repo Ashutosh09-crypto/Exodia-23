@@ -185,9 +185,9 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  height: 200px;
+  height: 205px;
   width: 102%;
-  background: url("/images/tray-header-large.png") no-repeat center center/cover;
+  background: url("/images/exodia_logo.png") no-repeat center center/cover ;
 
 }
 
@@ -244,6 +244,11 @@ body::after {
   transform: rotate(-45deg);
 }
 
+.headlogo{
+  position: relative;
+  top: 50%;
+}
+
 /* experiment */
 
 @media (max-width: 900px) {
@@ -295,7 +300,7 @@ body::after {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #333;
+    background: #d4d4d4;
   }
 
   .navbar .menu-items {
@@ -327,9 +332,11 @@ body::after {
     position: absolute;
     top: -17px;
     right: 15px;
-    height: 150%;
+    height: 130%;
   }
-
+  .headlogo{
+    top: 10px;
+  }
   .navbar-container input[type="checkbox"]:checked~.menu-items {
     transform: translateX(0);
     overflow: scroll !important;

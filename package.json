@@ -28,7 +28,7 @@
     "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.21"
   },
   "bugs": {
     "url": "https://github.com/Ashutosh09-crypto/Exodia-23/issues"

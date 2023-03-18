@@ -83,9 +83,11 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #d3c8ac;
-    padding-top: 40px;
+    padding-top: 65px;
     /* border-right: 5px solid #d3c8ac; */
     height: 100vh;
+    position: relative;
+    top: -20px;
 }
 
 /* .slider::-webkit-scrollbar {
@@ -108,6 +110,7 @@ body {
     height: 100vh;
     width: 10px;
     position: relative;
+    top: -20px;
 }
 
 .items a {
