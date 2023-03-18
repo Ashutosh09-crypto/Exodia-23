@@ -849,3 +849,6 @@ videoedit {
 .padd{
   padding: 1%;
 }
+iframe{
+  width: 100%;
+}
