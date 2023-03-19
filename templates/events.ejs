@@ -85,7 +85,7 @@
                                                 Event : <%= events_cat[cat][i].name%>
                                         </p>
 
-                                        <i class="fa fa-close" style="color:white"></i>
+                                        <i class="fa fa-close" style="color:white ;"></i>
                                     </span>
 
                                     <%}%>
@@ -141,7 +141,7 @@
                                             <%k=1;%>
                                                 <%for(let cat in events_cat) {%>
 
-
+                                                    <%k2= 1%>
                                                     <% for(let i=0;i<events_cat[cat].length;i++) {%>
                                                         <div class="slider slide<%=`${k}`%>">
 
@@ -149,7 +149,7 @@
 
                                                                 <!-- check if k > 1 -->
 
-                                                                <% if(k> 1) {%>
+                                                                <% if(k2 > 1) {%>
                                                                     <label for="slider_<%=`${k-1}`%>"
                                                                         class="gif numb<%=`${k-1}`%> previous float-right"><i
                                                                             class="arrow-right"><%-
@@ -183,7 +183,7 @@
                                                                             </div>
                                                                         </div>
 
-                                                                        <% if(k < 33) {%>
+                                                                        <% if(k2 < events_cat[cat].length) {%>
                                                                             <label for="slider_<%=`${k+1}`%>"
                                                                                 class="gif next numb<%=`${k+1}`%> float-left"><i
                                                                                     class="arrow-left"><%-
@@ -194,6 +194,7 @@
                                                             </div>
 
                                                         </div>
+                                                        <%k2++%>
                                                         <%}%>
                                                             <%}%>
 
