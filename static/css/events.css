@@ -853,3 +853,8 @@ i:hover {
         width: 250px;
     }
 }
+
+.grid-list:hover i{
+    color: red;
+    font-size: 100px;
+}
