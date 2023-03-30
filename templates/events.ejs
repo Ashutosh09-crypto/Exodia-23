@@ -38,7 +38,7 @@
                 <li><a href="/events/joinTeam">JoinTeam</a></li>
                 <li><a id="map-btn">Map</a></li>
             </ul>
-            <h1 class="logo">Events</h1>
+            <h1 class="logo" style="top:17px">Events</h1>
         </div>
     </nav>
 
@@ -162,6 +162,7 @@
                                                                                 <div class="upper-heading"></div>
                                                                                 <h2>
                                                                                     <%=events_cat[cat][i].name%>
+                                                                                    
                                                                                 </h2>
                                                                                 <div class="lower-heading"></div>
                                                                             </div>
@@ -169,10 +170,13 @@
                                                                             <div class="content-wrapper">
 
 
+                                                                               <% var str = (events_cat[cat][i].name).toUpperCase().split("(")[0];
+                                                                               
+                                                                                    if(str[str.length-1]==' ') str = str.substring(0,str.length-1);
+                                                                                %>
+                                                                               <a href="./rulebooks/<%= str %>.pdf"> <h5>RuleBook: </h5> </a>
 
-                                                                                <h5>RuleBook: </h5>
-
-                                                                                <h5>Registration Fees: <%=events_cat[cat][i].fees%></h5>
+                                                                                <h5>Registration Fees: <%=(events_cat[cat][i].fees)%> <%=events_cat[cat][i].fees%></h5>
 
                                                                                 <p>CLUB : <%=cat %>
                                                                                 </p>
@@ -180,7 +184,12 @@
                                                                                 <a
                                                                                     href="/events/createTeam?event=<%=events_cat[cat][i].name%>">Register
                                                                                     Now</a>
+                                                                                <div class="content-disc">
+                                                                                    <p> <%=(events_cat[cat][i].content)%> </p>
+                                                                                </div>
+                                                                                
                                                                             </div>
+                                                                        
                                                                         </div>
 
                                                                         <% if(k2 < events_cat[cat].length) {%>
