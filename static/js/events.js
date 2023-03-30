@@ -175,13 +175,13 @@ function boxonhover(){
     $('.grid-list').hover(function () {
         console.log(this);
         let map_marks = this.children;
-        console.log(map_marks);
+        // console.log(map_marks);
         for(let i = 0;i<map_marks.length;i++)
         {
             let span_block = map_marks[i];
             let childs = span_block.children;
             let icon_child = childs[1];
-            console.log(icon_child);
+            // console.log(icon_child);
             icon_child.style.color="red";
             // icon_child.setAttribute('style', 'font-size:30px !important');
             icon_child.style.setProperty('font-size', '30px', 'important');
@@ -191,13 +191,13 @@ function boxonhover(){
     }, function () {
         console.log(this);
         let map_marks = this.children;
-        console.log(map_marks);
+        // console.log(map_marks);
         for(let i = 0;i<map_marks.length;i++)
         {
             let span_block = map_marks[i];
             let childs = span_block.children;
             let icon_child = childs[1];
-            console.log(icon_child);
+            // console.log(icon_child);
             icon_child.style.color="white";
             icon_child.style.setProperty('font-size', '12px', 'important');
 

@@ -118,7 +118,6 @@ module.exports = {
     },
     findAllColleges: async function () {
         colleges = await module.exports.authorize().then(module.exports.listColleges).catch(console.error);
-
         collegeList = []
         for (let i = 1; i < colleges.length; i++) {
             collegeList.push(colleges[i][0].toUpperCase());
