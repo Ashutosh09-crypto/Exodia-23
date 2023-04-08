@@ -60,43 +60,31 @@
 
 
             <!-- map code started -->
-            <div class="map">
-
-                <!-- map img -->
-                <img src=" /images/navigation-map.jpeg" class='map-img' data-aos="fade" data-aos-easing="linear"
-                    data-aos-duration="500">
-
-
+            <div class="newmap row">
 
                 <!-- box of each event  -->
-                <%let k=1;%>
-
+                <% k=1;k2=1%>
                     <%for(let cat in events_cat) {%>
 
-                        <div class="grid-box">
-                            <div class="grid-list">
-
-
-                                <!-- markers code started -->
-                                <% for(let i=0;i<events_cat[cat].length;i++) {%>
-                                    <span id="<%=k++%>" class="map-mark" style="font-size: 3px;">
-
-                                        <p style="display: none;">Club : <%= cat %>,
-                                                Event : <%= events_cat[cat][i].name%>
-                                        </p>
-
-                                        <i class="fa fa-close" style="color:white ;"></i>
-                                    </span>
-
-                                    <%}%>
-                                        <!-- marker code ends -->
+                        <div class="cc col-xs-12 col-sm-6 col-md-4">
+                            <!-- Card -->
+                            <div class="card" id="<%=`${k}`%>">
+                          
+                              <!--Card image-->
+                              <div class="view overlay">
+                                <img class="card-img-top" id="img_<%=`${k2}`%>" src="<%= event_pic(k2) %>" alt="Card image cap">
+                              </div>
+                              <h4 class="cardhead"> <%=cat%> </h4>
+                              
                             </div>
-                        </div>
+                            <!-- Card -->
+                            </div>
 
-                        <!-- box ended -->
+                        <% k+= events_cat[cat].length;
+                           k2++;
+                         %>
 
-
-                        <%}%>
+                    <%}%>
 
 
 
@@ -176,7 +164,7 @@
                                                                                 %>
                                                                                <a href="./rulebooks/<%= str %>.pdf"> <h5>RuleBook: </h5> </a>
 
-                                                                                <h5>Registration Fees: <%=(events_cat[cat][i].fees)%> <%=events_cat[cat][i].fees%></h5>
+                                                                                <h5>Registration Fees - <%=events_cat[cat][i].fees%></h5>
 
                                                                                 <p>CLUB : <%=cat %>
                                                                                 </p>

@@ -15,56 +15,21 @@ $(".gif").click(function () {
     }, 1000);
 })
 
+$(".card").click(function(){
+    // console.log("hii");
+    let id = $(this).attr('id');
+    // console.log($(this));
+    // console.log(id);
+    let slider = "#slider_" + id;
+    // console.log(slider);
+    $(slider).prop('checked', true);
 
-
-// code to generate random markers in map
-
-function randint(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function randomizeImg(el, top, down, left, right) {
-    el.style.position = "absolute";
-
-    let marker_width_bias = ($('.map-mark').width()) / 2;
-    let marker_height_bias = ($('.map-mark').height()) / 2;
-
-    el.style.top = randint(top + marker_height_bias * 3, down - marker_height_bias * 3) + "px";
-    el.style.left = randint(left + marker_width_bias * 3, right - marker_width_bias * 3) + "px";
-}
-
-var inner_divs = $('.grid-list');
-var divs = $('.grid-box');
-
-
-let img = $('.map-img');
-let img_pos = img.position();
-let img_left = img_pos.left;
-let img_top = img_pos.top;
-let img_width = img.width();
-let img_height = img.height();
-
-
-for (let i = 0; i < inner_divs.length; i++) {
-
-    let lis = inner_divs[i].children;
-    let row = Math.floor(i / 4);
-
-
-    // return [(height / 3) + top, left + (width / 4) * row, (left + ((width / 4) * (row + 1)))];
-
-
-
-    for (let j = 0; j < lis.length; j++) {
-        let top = img_top + (img_height / 3) * row;
-        let bottom = top + (img_height / 3);
-
-        let left = img_left + (img_width / 4) * (i % 4);
-        let right = left + (img_width / 4);
-
-        randomizeImg(lis[j], top, bottom, left, right);
-    }
-}
+    $('.map-wrapper').hide();
+    $("#pokemon").fadeIn().center();
+    setTimeout(function () {
+        $("#pokemon").fadeOut()
+    }, 1000);
+});
 
 
 jQuery.fn.single_double_click = function (single_click_callback, double_click_callback, timeout) {
@@ -88,77 +53,62 @@ jQuery.fn.single_double_click = function (single_click_callback, double_click_ca
 
 //  code to put hover effect on marker
 
-function checkPosition() {
-    if (window.matchMedia('(max-width: 1000px)').matches) {
+// function checkPosition() {
+//     if (window.matchMedia('(max-width: 1000px)').matches) {
 
-        $(".map-mark").single_double_click(function () {
-            $('.small-description').show();
-            $('.small-description').text($(this).text());
-
-
-            $('.small-description').css({ "top": $(this).position().top + 40 + "px", "left": $(this).position().left + "px" });
-
-            let des_width = $('.small-description').width();
-            let right_point = $('.small-description').position().left + des_width;
-
-            let img_right = img_left + img_width;
-
-            if (img_right < right_point) {
-                $('.small-description').css('left', 'initial');
-                $('.small-description').css("right", 0);
-
-            }
-            // $('.small-description').toggle();
-        }, function () {
-            let id = $(this).attr('id');
-
-            let slider = "#slider_" + id;
-            console.log(slider);
-            $(slider).prop('checked', true);
+//         $(".map-mark").single_double_click(function () {
+//             $('.small-description').show();
+//             $('.small-description').text($(this).text());
 
 
-            $('.map-wrapper').hide();
-            $("#pokemon").fadeIn().center();
-            setTimeout(function () {
-                $("#pokemon").fadeOut()
-            }, 1000);
-        })
+//             $('.small-description').css({ "top": $(this).position().top + 40 + "px", "left": $(this).position().left + "px" });
 
-    } else {
-        $(".map-mark").hover(function () {
-            $('.small-description').text($(this).text());
-            $('.small-description').css({ "top": $(this).position().top + 20 + "px", "left": $(this).position().left + 20 + "px" })
-            $('.small-description').toggle();
-        }, function () {
-            $('.small-description').toggle();
-        });
+//             let des_width = $('.small-description').width();
+//             let right_point = $('.small-description').position().left + des_width;
 
+//             let img_right = img_left + img_width;
 
-        $(".map-mark").click(function () {
-            let id = $(this).attr('id');
+//             if (img_right < right_point) {
+//                 $('.small-description').css('left', 'initial');
+//                 $('.small-description').css("right", 0);
 
-            let slider = "#slider_" + id;
-            // console.log(slider);
-            $(slider).prop('checked', true);
+//             }
+//             // $('.small-description').toggle();
+//         }, function () {
+//             let id = $(this).attr('id');
 
-            $('.map-wrapper').hide();
-            $("#pokemon").fadeIn().center();
-            setTimeout(function () {
-                $("#pokemon").fadeOut()
-            }, 1000);
-        });
+//             let slider = "#slider_" + id;
+//             console.log(slider);
+//             $(slider).prop('checked', true);
 
 
-    }
-}
+//             $('.map-wrapper').hide();
+//             $("#pokemon").fadeIn().center();
+//             setTimeout(function () {
+//                 $("#pokemon").fadeOut()
+//             }, 1000);
+//         })
 
-checkPosition();
+//     } else {
+//         $(".map-mark").hover(function () {
+//             $('.small-description').text($(this).text());
+//             $('.small-description').css({ "top": $(this).position().top + 20 + "px", "left": $(this).position().left + 20 + "px" })
+//             $('.small-description').toggle();
+//         }, function () {
+//             $('.small-description').toggle();
+//         });
 
+
+
+
+//     }
+// }
+
+// checkPosition();
 
 $('#map-btn').click(function () {
     $('.map-wrapper').toggle();
 })
-
 
 
 // positioning of slidei using js
@@ -207,7 +157,6 @@ function boxonhover(){
     })
 }
 
-boxonhover();
+// boxonhover();
 positionSlides();
-
 // slidingEffect();
