@@ -22,6 +22,9 @@ body {
     /* justify-content: center; */
     color: white;
     height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
 }
 
 .image-wrapper {
@@ -87,8 +90,12 @@ button:hover {
     position: relative;
     flex-wrap: nowrap;
     width: auto;
-    display: block;
+    display: flex;
     overflow-x: visible;
+}
+
+.logo{
+    width: auto;
 }
 
 #user-img {
