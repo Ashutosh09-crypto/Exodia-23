@@ -5,22 +5,45 @@
 
 body {
     /* overflow: hidden; */
-
-    background: #0b1e24 linear-gradient(to right, rgb(1, 13, 11) 0%, rgb(25, 65, 78) 25%, rgb(23, 64, 76) 75%, rgb(1, 13, 11) 100%) repeat-y;
-
+    background: #0b1e24 linear-gradient(to right, rgb(1, 13, 11) 0%, rgb(8 21 25) 25%, rgb(7 19 23) 75%, rgb(1, 13, 11) 100%) repeat-y;
 }
 
 /* Slider wrapper*/
 .css-slider-wrapper {
     display: block;
     /* background: #FFF; */
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     z-index: -2;
+}
+
+.css-slider-wrapper::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgb(255, 0, 0); */
+    border-radius: 10px;
+
+    /* background-color: transparent; */
+}
+
+.css-slider-wrapper::-webkit-scrollbar {
+    width: 5px;
+    display: block;
+    right: 10px;
+    background-color: black;
+}
+
+.css-slider-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); */
+    background-color: rgba(129, 129, 129, 0.767);
+}
+
+.css-slider-wrapper::-webkit-scrollbar-track-piece:start {
+    background: transparent;
 }
 
 /* Slider */
@@ -69,21 +92,21 @@ body {
 }
 
 .slide2 {
-    background: url("https://compass-ssl.xboxlive.com/assets/1f/35/1f355aca-753c-4213-8a42-563128129070.jpg?n=Parallax_Sections_Large_Desktop_01.jpg") center center/cover no-repeat;
+    /* background: url("https://compass-ssl.xboxlive.com/assets/1f/35/1f355aca-753c-4213-8a42-563128129070.jpg?n=Parallax_Sections_Large_Desktop_01.jpg") center center/cover no-repeat; */
     /* background-repeat: no-repeat;
     background-size: auto; */
     /* left: 100% */
 }
 
 .slide3 {
-    background: url("https://assets.vg247.com/current//2021/03/sea_of_thieves.jpg") center center/cover no-repeat;
+    /* background: url("https://assets.vg247.com/current//2021/03/sea_of_thieves.jpg") center center/cover no-repeat; */
     /* background-repeat: no-repeat;
     background-size: auto; */
     /* left: 200% */
 }
 
 .slide4 {
-    background: url("https://gameranx.com/wp-content/uploads/2022/02/sea-of-thieves.jpg") center center/cover no-repeat;
+    /* background: url("https://gameranx.com/wp-content/uploads/2022/02/sea-of-thieves.jpg") center center/cover no-repeat; */
     /* background-repeat: no-repeat;
     background-size: auto; */
     /* left: 300%; */
@@ -580,7 +603,6 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.67);
 }
 
 .event-img {
