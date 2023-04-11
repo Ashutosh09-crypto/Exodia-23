@@ -69,22 +69,23 @@
                         <div class="cc col-xs-12 col-sm-6 col-md-4">
                             <!-- Card -->
                             <div class="card" id="<%=`${k}`%>">
-                          
-                              <!--Card image-->
-                              <div class="view overlay">
-                                <img class="card-img-top" id="img_<%=`${k2}`%>" src="<%= event_pic(k2) %>" alt="Card image cap">
-                              </div>
-                              <h4 class="cardhead"> <%=cat%> </h4>
-                              
+
+                                <!--Card image-->
+                                <div class="view overlay">
+                                    <img class="card-img-top" id="img_<%=`${k2}`%>" src="<%= event_pic(k2) %>"
+                                        alt="Card image cap">
+                                </div>
+                                <h4 class="cardhead">
+                                    <%=cat%>
+                                </h4>
+
                             </div>
                             <!-- Card -->
-                            </div>
+                        </div>
 
-                        <% k+= events_cat[cat].length;
-                           k2++;
-                         %>
+                        <% k+=events_cat[cat].length; k2++; %>
 
-                    <%}%>
+                            <%}%>
 
 
 
@@ -130,70 +131,78 @@
                                                 <%for(let cat in events_cat) {%>
 
                                                     <%k2= 1%>
-                                                    <% for(let i=0;i<events_cat[cat].length;i++) {%>
-                                                        <div class="slider slide<%=`${k}`%>">
+                                                        <% for(let i=0;i<events_cat[cat].length;i++) {%>
+                                                            <div class="slider slide<%=`${k}`%>">
 
-                                                            <div class="event-wrapper">
+                                                                <div class="event-wrapper">
 
-                                                                <!-- check if k > 1 -->
+                                                                    <!-- check if k > 1 -->
 
-                                                                <% if(k2 > 1) {%>
-                                                                    <label for="slider_<%=`${k-1}`%>"
-                                                                        class="gif numb<%=`${k-1}`%> previous float-right"><i
-                                                                            class="arrow-right"><%-
-                                                                                include("partials/arrow_svg.ejs")%></i></label>
-                                                                    <%}%>
+                                                                    <% if(k2> 1) {%>
+                                                                        <label for="slider_<%=`${k-1}`%>"
+                                                                            class="gif numb<%=`${k-1}`%> previous float-right"><i
+                                                                                class="arrow-right"><%-
+                                                                                    include("partials/arrow_svg.ejs")%></i></label>
+                                                                        <%}%>
 
-                                                                        <div class="inner-page">
+                                                                            <div class="inner-page">
 
-                                                                            <div class="heading-wrapper">
-                                                                                <div class="upper-heading"></div>
-                                                                                <h2>
-                                                                                    <%=events_cat[cat][i].name%>
-                                                                                    
-                                                                                </h2>
-                                                                                <div class="lower-heading"></div>
-                                                                            </div>
+                                                                                <div class="heading-wrapper">
+                                                                                    <div class="upper-heading"></div>
+                                                                                    <h2>
+                                                                                        <%=events_cat[cat][i].name%>
 
-                                                                            <div class="content-wrapper">
-
-
-                                                                               <% var str = (events_cat[cat][i].name).toUpperCase().split("(")[0];
-                                                                               
-                                                                                    if(str[str.length-1]==' ') str = str.substring(0,str.length-1);
-                                                                                %>
-                                                                               <a href="./rulebooks/<%= str %>.pdf"> <h5>RuleBook: </h5> </a>
-
-                                                                                <h5>Registration Fees - <%=events_cat[cat][i].fees%></h5>
-
-                                                                                <p>CLUB : <%=cat %>
-                                                                                </p>
-
-                                                                                <a
-                                                                                    href="/events/createTeam?event=<%=events_cat[cat][i].name%>">Register
-                                                                                    Now</a>
-                                                                                <div class="content-disc">
-                                                                                    <p> <%=(events_cat[cat][i].content)%> </p>
+                                                                                    </h2>
+                                                                                    <div class="lower-heading"></div>
                                                                                 </div>
-                                                                                
+
+                                                                                <div class="content-wrapper">
+                                                                                    <div class="content-disc">
+                                                                                        <p>
+                                                                                            <%=(events_cat[cat][i].content)%>
+                                                                                        </p>
+                                                                                    </div>
+
+                                                                                    <% var
+                                                                                        str=(events_cat[cat][i].name).toUpperCase().split("(")[0];
+                                                                                        if(str[str.length-1]==' ' )
+                                                                                        str=str.substring(0,str.length-1);
+                                                                                        %>
+                                                                                        <h5>Registration Fees -
+                                                                                            <%=events_cat[cat][i].fees%>
+                                                                                        </h5>
+                                                                                        <a
+                                                                                            href="./rulebooks/<%= str %>.pdf">
+                                                                                            <h5>RuleBook</h5>
+                                                                                        </a>
+
+
+
+                                                                                        </p>
+
+                                                                                        <a
+                                                                                            href="/events/createTeam?event=<%=events_cat[cat][i].name%>">Register
+                                                                                            Now</a>
+
+
+                                                                                </div>
+
                                                                             </div>
-                                                                        
-                                                                        </div>
 
-                                                                        <% if(k2 < events_cat[cat].length) {%>
-                                                                            <label for="slider_<%=`${k+1}`%>"
-                                                                                class="gif next numb<%=`${k+1}`%> float-left"><i
-                                                                                    class="arrow-left"><%-
-                                                                                        include("partials/arrow_svg.ejs")%></i></label>
-                                                                            <%}%>
+                                                                            <% if(k2 < events_cat[cat].length) {%>
+                                                                                <label for="slider_<%=`${k+1}`%>"
+                                                                                    class="gif next numb<%=`${k+1}`%> float-left"><i
+                                                                                        class="arrow-left"><%-
+                                                                                            include("partials/arrow_svg.ejs")%></i></label>
+                                                                                <%}%>
 
-                                                                                <% k++ %>
+                                                                                    <% k++ %>
+                                                                </div>
+
                                                             </div>
-
-                                                        </div>
-                                                        <%k2++%>
-                                                        <%}%>
-                                                            <%}%>
+                                                            <%k2++%>
+                                                                <%}%>
+                                                                    <%}%>
 
         </div>
 
