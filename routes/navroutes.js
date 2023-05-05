@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { userDetails, findUserTeams, findAllHeads, refactorHeads } = require("../utils")
+const { userDetails, findUserTeams, findAllHeads, refactorHeads, findAllSponsors } = require("../utils")
 
 const { authCheck } = require("../middleware/auth")
 
@@ -24,6 +24,16 @@ router.get("/brochures", async (req, res) => {
         authenticated: req.isAuthenticated()
     }
     res.render("brochure", context);
+})
+
+router.get("/sponsors", async (req, res) => {
+    const context = {
+        authenticated: req.isAuthenticated(),
+        sponsors: await findAllSponsors()
+    }
+
+
+    res.render("sponsors", context)
 })
 
 

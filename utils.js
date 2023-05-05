@@ -338,5 +338,12 @@ module.exports = {
         const faqTable = require("./models/faq");
         const faqs = await faqTable.find({}).lean();
         return faqs;
+    },
+    findAllSponsors: async function () {
+        const sponTable = require("./models/sponser");
+
+        const sponsors = await sponTable.find({}).lean();
+
+        return sponsors;
     }
 }

@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Windlass";
+    src: url("/fonts/Windlass.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0b1e24 linear-gradient(to right, rgb(1, 13, 11) 0%, rgb(11, 30, 36) 25%, rgb(11, 30, 36) 75%, rgb(1, 13, 11) 100%) repeat-y;
+    width: 100%;
+    overflow-x: hidden;
+    color: white;
+}
+
+.wrapper {
+    width: 80%;
+    height: auto;
+
+    margin: auto;
+    margin-top: 60px;
+}
+
+#spon-heading {
+    color: rgb(153, 146, 146);
+    text-align: center;
+    font-family: "Windlass";
+}
+
+#sponsors {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sponsor {
+    padding: 50px;
+}
+
+.spon-img {
+    width: 200px;
+    height: 200px;
+    clip-path: url("#article-panel");
+}
+
+.spon-name {
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(153, 146, 146);
+    font-family: "Windlass";
+}
+
+
+.contactedit {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    /* float:right; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contactedit h1 {
+    color: white;
+    font-family: 'Windlass';
+}
+
+.contactedit .h1editleft {
+    margin: 0px 10px;
+    width: 20%;
+    height: 5px;
+    background: url("/images/left-line.f42a3f96.svg")
+}
+
+.contactedit .h1editright {
+    margin: 0px 10px;
+    width: 20%;
+    height: 5px;
+    background: url("/images/right-line.6f467162.svg")
+}
